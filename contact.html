@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact OXYZ Health to Book an appointment and begin your journey toward better health."
+    />
+    <title>OXYZ Health | Contact Us</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="index.html" class="logo"
+        ><img src="images/oxyzcell-1.webp" alt="OXYZ Health" style="height: 40px"
+      /></a>
+            <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="bioseries.html">BioSeries</a>
+        <a href="oxyz-cell.html">Stem Cell</a>
+        <a href="training.html">Training &amp; Consultation</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="nav-right" style="display: flex; align-items: center; gap: 20px; z-index: 1000;">
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div style="padding-top: 100px; background: var(--bg-light)">
+      <div class="section">
+        <div class="section-header animate-on-scroll">
+          <h1 class="section-title">
+            Let's Build the Future of Healthcare Together
+          </h1>
+          <p class="section-subtitle mt-2">
+            Whether you're exploring regenerative medicine, healthy aging
+            strategies, or personalized wellness solutions, OXYZ Health &
+            Wellness is here to guide you every step of the way.
+          </p>
+        </div>
+
+        <div class="grid-2 animate-on-scroll">
+          <!-- Contact Information -->
+          <div>
+            <h2 class="mb-4 text-primary">Get In Touch</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;">
+
+              <div class="contact-item">
+                <div class="contact-icon-wrapper">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h4>Office Location</h4>
+                  <p>Irving Pl, #1-26, Singapore 369546</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon-wrapper">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h4>Email Address</h4>
+                  <p>contact@oxyzhealth.com</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon-wrapper">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+65 8616 3762</p>
+                </div>
+              </div>
+
+              <div class="contact-item contact-whatsapp">
+                <div class="contact-icon-wrapper">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div>
+                  <h4>WhatsApp</h4>
+                  <p>
+                    <a href="https://wa.me/6586163762" style="color: #25d366; font-weight: 500;">Chat with us instantly</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon-wrapper">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div>
+                  <h4>Business Hours</h4>
+                  <p>Mon - Sat: 9:00 AM - 7:00 PM<br>Sun: Closed</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <h3 class="mb-4">Book an appointment</h3>
+            <form id="bookingForm" onsubmit="sendToWhatsApp(event)">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="waName"
+                  class="form-control"
+                  placeholder="Full Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="waSpecialization"
+                  class="form-control"
+                  placeholder="Specialization"
+                  required
+                />
+              </div>
+              <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px"
+                class="mb-3"
+              >
+                <input
+                  type="tel"
+                  id="waPhone"
+                  class="form-control"
+                  placeholder="Phone Number"
+                  required
+                />
+                <input
+                  type="text"
+                  id="waCountry"
+                  class="form-control"
+                  placeholder="Country"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="date"
+                  id="waDate"
+                  class="form-control"
+                  title="Preferred Consultation Date"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="waMessage"
+                  class="form-control"
+                  placeholder="Tell us about your health goals or enquiry..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%">
+                Submit Request
+              </button>
+            </form>
+
+            <script>
+              function sendToWhatsApp(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('waName').value;
+                const specialization = document.getElementById('waSpecialization').value;
+                const phone = document.getElementById('waPhone').value;
+                const country = document.getElementById('waCountry').value;
+                const date = document.getElementById('waDate').value;
+                const message = document.getElementById('waMessage').value;
+                
+                const waMessage = `*New Appointment Request* 📅\n-----------------------------------\n*Name:* ${name}\n*Specialization:* ${specialization}\n*Phone:* ${phone}\n*Country:* ${country}\n*Preferred Date:* ${date}\n\n*Health Goals / Enquiry:*\n${message}\n-----------------------------------`;
+                
+                const waUrl = `https://wa.me/6586163762?text=${encodeURIComponent(waMessage)}`;
+                
+                window.open(waUrl, '_blank');
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="section-header animate-on-scroll">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div class="grid-2 animate-on-scroll">
+        <div
+          style="
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+          "
+        >
+          <h4 class="mb-2 text-primary">Is consultation mandatory?</h4>
+          <p>
+            Yes. Every regenerative wellness program begins with a professional
+            consultation to ensure recommendations are appropriate for your
+            individual needs.
+          </p>
+        </div>
+        <div
+          style="
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+          "
+        >
+          <h4 class="mb-2 text-primary">
+            Can I consult before deciding on treatment?
+          </h4>
+          <p>
+            Absolutely. The consultation is an opportunity to ask questions,
+            understand available options, and discuss your wellness objectives
+            before making any decisions.
+          </p>
+        </div>
+        <div
+          style="
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+          "
+        >
+          <h4 class="mb-2 text-primary">
+            Will I receive a personalized recommendation?
+          </h4>
+          <p>
+            Yes. Based on your consultation and assessment, our healthcare
+            professionals will recommend the most suitable wellness approach for
+            your circumstances.
+          </p>
+        </div>
+        <div
+          style="
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+          "
+        >
+          <h4 class="mb-2 text-primary">How long does treatment take?</h4>
+          <p>
+            Treatment duration varies depending on the individual's personalized
+            wellness plan and clinical assessment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="images/oxyzcell-1.webp" alt="OXYZ Health" style="height: 50px; margin-bottom: 20px;">
+          <p>Advancing regenerative medicine by combining scientific innovation
+            with personalized wellness solutions.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/OXYZHealthInternational"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/oxyz.bioseries?igsh=YjFvcmp1c2VwdjQ5"><i class="fab fa-instagram"></i></a>
+            <a href="https://international.oxyzhealth.com"><i class="fas fa-globe"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+                    <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bioseries.html">BioSeries</a></li>
+            <li><a href="oxyz-cell.html">Stem Cell</a></li>
+            <li><a href="training.html">Training & Consultation</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Quality Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul class="footer-links">
+            <li >
+              <i
+                class="fas fa-map-marker-alt"
+                style="margin-right: 10px; color: var(--gold)"
+              ></i>
+              Irving Pl, #1-26, Singapore 369546
+            </li>
+            <li >
+              <i
+                class="fas fa-envelope"
+                style="margin-right: 10px; color: var(--gold)"
+              ></i>
+              contact@oxyzhealth.com
+            </li>
+            <li >
+              <i
+                class="fas fa-phone"
+                style="margin-right: 10px; color: var(--gold)"
+              ></i>
+              +65 8616 3762
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 OXYZ Health & Wellness. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+  
+    
+</body>
+</html>
