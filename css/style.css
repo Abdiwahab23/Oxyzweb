@@ -1610,3 +1610,281 @@ body { top: 0 !important; }
   21.66% { opacity: 0; }
   100% { opacity: 0; }
 }
+
+/* ======================== */
+/* 5D Cycle                 */
+/* ======================== */
+.cycle-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 60px auto;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cycle-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 440px;
+  height: 440px;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  animation: rotateRing 40s linear infinite;
+}
+@keyframes rotateRing {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+.cycle-center {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.cycle-center .cycle-number {
+  font-size: 6rem;
+  font-weight: 300;
+  color: var(--text-dark);
+  line-height: 1;
+  font-family: var(--font-primary);
+}
+.cycle-center .cycle-text {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: -10px;
+}
+.cycle-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  margin-top: -70px;
+  margin-left: -70px;
+  --radius: 220px;
+  transform: rotate(var(--angle)) translate(var(--radius)) rotate(calc(-1 * var(--angle)));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.cycle-node:hover {
+  transform: rotate(var(--angle)) translate(var(--radius)) rotate(calc(-1 * var(--angle))) scale(1.1);
+  border-color: var(--gold);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+}
+.cycle-icon {
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.cycle-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.cycle-label span {
+  font-size: 1.4rem;
+  color: var(--gold);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .cycle-container {
+    max-width: 100%;
+    aspect-ratio: auto;
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px auto;
+  }
+  .cycle-ring {
+    display: none;
+  }
+  .cycle-center {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 20px;
+  }
+  .cycle-node {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 0;
+    width: 100%;
+    max-width: 300px;
+    height: 100px;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0 30px;
+    transform: none !important;
+  }
+  .cycle-icon {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
+
+/* ======================== */
+/* 5D Cycle                 */
+/* ======================== */
+.cycle-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 60px auto;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cycle-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 440px;
+  height: 440px;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  animation: rotateRing 40s linear infinite;
+}
+@keyframes rotateRing {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+.cycle-center {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.cycle-center .cycle-number {
+  font-size: 6rem;
+  font-weight: 300;
+  color: var(--text-dark);
+  line-height: 1;
+  font-family: var(--font-primary);
+}
+.cycle-center .cycle-text {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: -10px;
+}
+.cycle-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  margin-top: -70px;
+  margin-left: -70px;
+  --radius: 220px;
+  transform: rotate(var(--angle)) translate(var(--radius)) rotate(calc(-1 * var(--angle)));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.cycle-node:hover {
+  transform: rotate(var(--angle)) translate(var(--radius)) rotate(calc(-1 * var(--angle))) scale(1.1);
+  border-color: var(--gold);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+}
+.cycle-icon {
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.cycle-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.cycle-label span {
+  font-size: 1.4rem;
+  color: var(--gold);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .cycle-container {
+    max-width: 100%;
+    aspect-ratio: auto;
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px auto;
+  }
+  .cycle-ring {
+    display: none;
+  }
+  .cycle-center {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 20px;
+  }
+  .cycle-node {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 0;
+    width: 100%;
+    max-width: 300px;
+    height: 100px;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0 30px;
+    transform: none !important;
+  }
+  .cycle-icon {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
