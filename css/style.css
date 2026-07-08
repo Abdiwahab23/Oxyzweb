@@ -104,6 +104,7 @@ img {
   text-align: center;
   letter-spacing: 0;
   gap: 8px;
+  white-space: nowrap;
 }
 
 .btn-primary {
