@@ -1449,6 +1449,11 @@ textarea.form-control {
   width: var(--target-width) !important;
 }
 
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 /* Mobile Menu Redesign */
 @media (max-width: 768px) {
   .nav-links {

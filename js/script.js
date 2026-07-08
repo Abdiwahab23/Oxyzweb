@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (menuToggle && navLinks) {
     menuToggle.addEventListener("click", () => {
       navLinks.classList.toggle("active");
+      document.body.classList.toggle("no-scroll");
   // Mobile Menu Header & Active State
   if (navLinks && !document.querySelector('.mobile-nav-header')) {
     const header = document.createElement('div');
