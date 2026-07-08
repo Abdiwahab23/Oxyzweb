@@ -1473,6 +1473,7 @@ body.no-scroll {
     box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    margin: 0 !important;
   }
 
   .mobile-nav-header {
