@@ -551,6 +551,14 @@ img {
   transform: scale(1.03);
 }
 
+@media (min-width: 993px) {
+  .sticky-img-wrapper {
+    position: sticky;
+    top: 120px;
+  }
+}
+
+
 /* ======================== */
 /* Gallery                   */
 /* ======================== */
