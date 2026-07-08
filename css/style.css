@@ -194,10 +194,10 @@ img {
 
 .logo-text {
   font-family: var(--font-main);
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 800;
   color: var(--primary-dark);
-  letter-spacing: -0.04em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -205,6 +205,7 @@ img {
 .logo-text-gold {
   color: var(--gold);
   font-weight: 700;
+  margin-left: 4px;
 }
 
 @media (max-width: 500px) {
