@@ -189,6 +189,28 @@ img {
 .logo img {
   height: 40px;
   width: auto;
+  margin-right: 12px;
+}
+
+.logo-text {
+  font-family: var(--font-main);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary-dark);
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.logo-text-gold {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+@media (max-width: 500px) {
+  .logo-text {
+    font-size: 16px;
+  }
 }
 
 .nav-links {
