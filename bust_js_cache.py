@@ -8,8 +8,9 @@ for file_path in html_files:
         content = f.read()
         
     # Replace the old js link with a cache-busting version
-    new_content = content.replace('"js/script.js?v=2"', '"js/script.js?v=3"')
-    new_content = new_content.replace('"js/script.js"', '"js/script.js?v=3"')
+    new_content = content.replace('"js/script.js?v=3"', '"js/script.js?v=4"')
+    new_content = new_content.replace('"js/script.js?v=2"', '"js/script.js?v=4"')
+    new_content = new_content.replace('"js/script.js"', '"js/script.js?v=4"')
     
     if new_content != content:
         with open(file_path, 'w', encoding='utf-8') as f:
