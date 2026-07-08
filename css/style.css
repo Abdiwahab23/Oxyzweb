@@ -218,17 +218,7 @@ img {
   display: flex;
   gap: 20px;
   align-items: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-@media (max-width: 1150px) {
-  .nav-links {
-    position: static;
-    transform: none;
-    margin: 0 auto;
-  }
+  margin: 0 auto;
 }
 
 .nav-links a {
