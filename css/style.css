@@ -614,13 +614,17 @@ img {
   box-shadow: var(--shadow);
   background: var(--white);
   padding: 12px;
+  display: flex;
+  align-items: stretch;
 }
 
 .before-after-img {
   width: 100%;
-  height: auto;
+  height: 320px;
   display: block;
   border-radius: var(--radius-sm);
+  object-fit: cover;
+  object-position: center;
 }
 
 /* ======================== */
