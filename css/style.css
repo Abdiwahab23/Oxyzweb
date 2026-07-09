@@ -1656,7 +1656,7 @@ body {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  animation: crossfadeAnim 28s infinite;
+  animation: crossfadeAnim 20s infinite;
 }
 
 .crossfade-1 {
@@ -1679,13 +1679,6 @@ body {
   animation-delay: 16s;
 }
 
-.crossfade-6 {
-  animation-delay: 20s;
-}
-
-.crossfade-7 {
-  animation-delay: 24s;
-}
 
 @keyframes crossfadeAnim {
   0% {
@@ -1696,11 +1689,11 @@ body {
     opacity: 1;
   }
 
-  14.28% {
+  20% {
     opacity: 1;
   }
 
-  19.28% {
+  25% {
     opacity: 0;
   }
 
