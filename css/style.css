@@ -812,7 +812,7 @@ img {
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 36px;
+  gap: 48px;
   margin-bottom: 48px;
 }
 
@@ -850,10 +850,13 @@ img {
 
 .footer-links a {
   color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  transition: all 0.3s ease;
 }
 
 .footer-links a:hover {
   color: var(--gold);
+  transform: translateX(4px);
 }
 
 /* ======================== */
@@ -1009,13 +1012,7 @@ img {
   line-height: 1;
 }
 
-color: rgba(255, 255, 255, 0.75);
-font-size: 13px;
 
-.footer-links a:hover {
-  color: var(--gold);
-  padding-left: 4px;
-}
 
 .social-links {
   display: flex;
@@ -1027,24 +1024,39 @@ font-size: 13px;
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
+  color: #ffffff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Facebook */
+.social-links a:nth-child(1) {
+  background-color: #1877F2;
+}
+
+/* Instagram */
+.social-links a:nth-child(2) {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+/* Globe/Website */
+.social-links a:nth-child(3) {
+  background-color: var(--gold);
 }
 
 .social-links a:hover {
-  background: var(--gold);
-  color: white;
   transform: translateY(-2px);
+  filter: brightness(1.15);
+  color: #ffffff;
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
   color: rgba(255, 255, 255, 0.5);
   font-size: 13px;
 }
@@ -1702,4 +1714,6 @@ body {
   100% {
     opacity: 0;
   }
+}
+}
 }
