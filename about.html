@@ -1,337 +1,603 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="OXYZ Health & Wellness - Advancing the Future of Regenerative Healthcare. Innovative stem cell therapies and BioSeries products."
-    />
-    <title>OXYZ Health & Wellness | Regenerative Medicine & Stem Cell Therapy</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="OXYZ Health & Wellness - Advancing the Future of Regenerative Healthcare. Innovative stem cell therapies and BioSeries products." />
+  <title>OXYZ Health & Wellness | Regenerative Medicine & Stem Cell Therapy</title>
 
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css?v=7" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon_white.png" />
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar scrolled">
-      <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;">
-        <img src="images/Logo.png" alt="OXYZ Health & Wellness" style="height: 40px" />
-        <span class="logo-text">OXYZ <span class="logo-text-gold">Health & Wellness</span></span>
-      </a>
-            <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="bioseries.html">BioSeries</a>
-        <a href="oxyz-cell.html">Stem Cell</a>
-        <a href="training.html">Training &amp; Consultation</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css?v=7" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon_white.png" />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar scrolled">
+    <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;">
+      <img src="images/Logo.png" alt="OXYZ Health & Wellness" style="height: 40px" />
+      <span class="logo-text">OXYZ <span class="logo-text-gold">Health & Wellness</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="bioseries.html">BioSeries</a>
+      <a href="oxyz-cell.html">Stem Cell</a>
+      <a href="training.html">Training &amp; Consultation</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="nav-right" style="display: flex; align-items: center; gap: 20px; z-index: 1000;">
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
       </div>
-      <div class="nav-right" style="display: flex; align-items: center; gap: 20px; z-index: 1000;">
-        <div class="menu-toggle">
-          <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" style="background-image: url('About us/DSC07135-2.jpg'); background-position: center;">
+    <div class="hero-content">
+      <h1 class="hero-title">About OXYZ Health & Wellness</h1>
+      <p class="hero-subtitle">
+        Leading the way in regenerative medicine, scientific innovation, and personalized wellness solutions.
+      </p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="section">
+    <div class="section-header animate-on-scroll">
+      <h2 class="section-title">Our Story</h2>
+    </div>
+    <div class="animate-on-scroll"
+      style="max-width: 800px; margin: 0 auto; text-align: left; font-size: 1.05rem; line-height: 1.7;">
+      <p class="mb-4">
+        OXYZ Health & Wellness is dedicated to advancing the future of regenerative healthcare. We believe in harnessing
+        the body's natural potential to heal, restore, and maintain optimal vitality.
+      </p>
+      <p>
+        Our team of world-class experts combines cutting-edge biotechnology with clinical excellence to provide
+        comprehensive regenerative solutions tailored to your individual needs.
+      </p>
+    </div>
+  </section>
+
+  <!-- Doctors Section -->
+  <style>
+    .doc-card {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 18px;
+      padding: 0 0 24px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .doc-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 18px 40px rgba(5, 120, 92, 0.10), 0 4px 12px rgba(0,0,0,0.05);
+      border-color: rgba(210, 175, 96, 0.35);
+    }
+    
+    .doc-img-wrap {
+      width: 100%;
+      height: 280px;
+      margin-bottom: 24px;
+      background: linear-gradient(145deg, #ffffff 40%, rgba(212,175,55,0.15) 100%);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    }
+    
+    .doc-img-wrap img {
+      height: 95%;
+      width: auto;
+      object-fit: contain;
+      object-position: bottom center;
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    
+    .doc-card:hover .doc-img-wrap img {
+      transform: scale(1.05);
+    }
+    
+    .doc-name {
+      font-family: var(--font-main);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      letter-spacing: -0.01em;
+      padding: 0 10px;
+      line-height: 1.4;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+    
+    .doc-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+  </style>
+
+  <section class="section section-bg">
+    <div class="section-header animate-on-scroll">
+      <h2 class="section-title">Meet Our Experts</h2>
+      <p class="section-subtitle mt-2">The clinical minds driving our regenerative solutions.</p>
+    </div>
+    <div class="product-grid-4 animate-on-scroll" style="margin-bottom: 0;">
+      <!-- Doctor 1 -->
+      <div class="doc-card">
+        <div class="doc-img-wrap">
+          <img src="About us/doc2.png" alt="Dr. Abdullah Asad Siddiqui" loading="lazy" />
         </div>
-      </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero" style="background-image: url('About us/DSC07135-2.jpg'); background-position: center;">
-      <div class="hero-content">
-        <h1 class="hero-title">About OXYZ Health & Wellness</h1>
-        <p class="hero-subtitle">
-          Leading the way in regenerative medicine, scientific innovation, and personalized wellness solutions.
-        </p>
-      </div>
-    </header>
-
-    <!-- About Section -->
-    <section class="section">
-      <div class="section-header animate-on-scroll">
-        <h2 class="section-title">Our Story</h2>
-      </div>
-      <div class="animate-on-scroll" style="max-width: 800px; margin: 0 auto; text-align: left; font-size: 1.05rem; line-height: 1.7;">
-        <p class="mb-4">
-          OXYZ Health & Wellness is dedicated to advancing the future of regenerative healthcare. We believe in harnessing the body's natural potential to heal, restore, and maintain optimal vitality. 
-        </p>
-        <p>
-          Our team of world-class experts combines cutting-edge biotechnology with clinical excellence to provide comprehensive regenerative solutions tailored to your individual needs.
-        </p>
-      </div>
-    </section>
-
-    <!-- Doctors Section -->
-    <section class="section section-bg">
-      <div class="section-header animate-on-scroll">
-        <h2 class="section-title">Meet Our Experts</h2>
-        <p class="section-subtitle mt-2">The clinical minds driving our regenerative solutions.</p>
-      </div>
-      <div class="grid-4 animate-on-scroll">
-        <div style="text-align: center;">
-          <img src="About us/doc2.png" alt="Dr. Abdullah Asad Siddiqui" style="width: 100%; max-width: 240px; height: 280px; margin: 0 auto 20px auto; border-radius: 20px; object-fit: cover; background: linear-gradient(145deg, #ffffff 40%, rgba(212,175,55,0.2) 100%); border: 1px solid rgba(212,175,55,0.5); box-shadow: 0 10px 25px rgba(14,107,77,0.08); padding-top: 15px;">
-          <h3 class="text-primary" style="font-size: 1.15rem; margin-bottom: 5px; font-weight: 400; font-family: var(--font-primary);">Dr. Abdullah Asad Siddiqui</h3>
-          
-        </div>
-        <div style="text-align: center;">
-          <img src="About us/doc1.png" alt="Dr.med Thorsten Muthorst" style="width: 100%; max-width: 240px; height: 280px; margin: 0 auto 20px auto; border-radius: 20px; object-fit: cover; background: linear-gradient(145deg, #ffffff 40%, rgba(212,175,55,0.2) 100%); border: 1px solid rgba(212,175,55,0.5); box-shadow: 0 10px 25px rgba(14,107,77,0.08); padding-top: 15px;">
-          <h3 class="text-primary" style="font-size: 1.15rem; margin-bottom: 5px; font-weight: 400; font-family: var(--font-primary);">Dr.med Thorsten Muthorst</h3>
-          
-        </div>
-        <div style="text-align: center;">
-          <img src="About us/DR.SAM4-.png" alt="DR Sam" style="width: 100%; max-width: 240px; height: 280px; margin: 0 auto 20px auto; border-radius: 20px; object-fit: cover; object-position: 25% top; background: linear-gradient(145deg, #ffffff 40%, rgba(212,175,55,0.2) 100%); border: 1px solid rgba(212,175,55,0.5); box-shadow: 0 10px 25px rgba(14,107,77,0.08); padding-top: 15px;">
-          <h3 class="text-primary" style="font-size: 1.15rem; margin-bottom: 5px; font-weight: 400; font-family: var(--font-primary);">Dr. Sam</h3>
-          
-        </div>
-        <div style="text-align: center;">
-          <img src="About us/doc3.png" alt="Dr. Mohammed A. Abdalqader" style="width: 100%; max-width: 240px; height: 280px; margin: 0 auto 20px auto; border-radius: 20px; object-fit: cover; background: linear-gradient(145deg, #ffffff 40%, rgba(212,175,55,0.2) 100%); border: 1px solid rgba(212,175,55,0.5); box-shadow: 0 10px 25px rgba(14,107,77,0.08); padding-top: 15px;">
-          <h3 class="text-primary" style="font-size: 1.15rem; margin-bottom: 5px; font-weight: 400; font-family: var(--font-primary);">Dr. Mohammed A. Abdalqader</h3>
-          
-        </div>
-      </div>
-    </section>
-
-    <!-- Products Gallery -->
-    <section class="section">
-      <div class="section-header animate-on-scroll">
-        <h2 class="section-title">Product Portfolio</h2>
-        <p class="section-subtitle mt-2">Explore our premium range of regenerative products.</p>
-      </div>
-
-      <div class="animate-on-scroll mb-5">
-        <h3 class="text-primary text-center mb-4" style="font-size: 1.5rem;">Featured Collections</h3>
-        <div class="grid-2">
-          <div class="card" style="padding: 0; overflow: hidden;">
-            <img src="Products/DSC07537.jpg" alt="OXYZ Product 1" style="width: 100%; height: 350px; object-fit: cover; display: block;" class="lightbox-trigger">
-            <div style="padding: 20px;">
-              <h3 class="card-title text-primary mb-2">Professional Care Formula</h3>
-              <p>Advanced bioactive formulation developed to support cellular rejuvenation.</p>
-            </div>
-          </div>
-          <div class="card" style="padding: 0; overflow: hidden;">
-            <img src="Products/DSC07542-3.jpg" alt="OXYZ Product 2" style="width: 100%; height: 350px; object-fit: cover; display: block;" class="lightbox-trigger">
-            <div style="padding: 20px;">
-              <h3 class="card-title text-primary mb-2">Regenerative Aesthetics line</h3>
-              <p>Formulated to complement modern aesthetic treatments and tissue support.</p>
-            </div>
-          </div>
-          <div class="card" style="padding: 0; overflow: hidden;">
-            <img src="Products/DSC07554.jpg" alt="OXYZ Product 3" style="width: 100%; height: 350px; object-fit: cover; display: block;" class="lightbox-trigger">
-            <div style="padding: 20px;">
-              <h3 class="card-title text-primary mb-2">Advanced Stem Cell Kit</h3>
-              <p>Comprehensive biological solutions engineered for clinical excellence.</p>
-            </div>
-          </div>
-
-        </div>
+        <div class="doc-title">Medical Expert</div>
+        <h3 class="doc-name">Dr. Abdullah Asad Siddiqui</h3>
       </div>
       
-      <div class="animate-on-scroll mb-5">
-        <h3 class="text-primary text-center mb-4" style="font-size: 1.5rem;">BioSeries</h3>
-        <div class="grid-4">
-          <!-- BioCTS -->
-          <div class="card">
-            <div class="card-img">
-              <img src="Bioseries/BioCTS.png" alt="BioCTS" />
-            </div>
-            <h3 class="card-title text-primary">BioCTS</h3>
-            <h4 class="mb-2 text-gold">Connective Tissue Support</h4>
-            <p class="card-text">
-              Developed to support connective tissue health, skin firmness, and structural integrity.
-            </p>
-            <ul class="feature-list" style="margin-bottom: 20px">
-              <li style="font-size: 0.9rem">Skin firmness</li>
-              <li style="font-size: 0.9rem">Structural integrity</li>
-            </ul>
-          </div>
-          <!-- BioMSC -->
-          <div class="card">
-            <div class="card-img">
-              <img src="Bioseries/BioMSC.png" alt="BioMSC" />
-            </div>
-            <h3 class="card-title text-primary">BioMSC</h3>
-            <h4 class="mb-2 text-gold">Cellular Renewal Support</h4>
-            <p class="card-text">
-              Formulated to support regenerative aesthetic procedures by focusing on tissue quality and biological renewal.
-            </p>
-          </div>
-          <!-- BioPLC -->
-          <div class="card">
-            <div class="card-img">
-              <img src="Bioseries/BioPLC.png" alt="BioPLC" />
-            </div>
-            <h3 class="card-title text-primary">BioPLC</h3>
-            <h4 class="mb-2 text-gold">Skin Vitality & Rejuvenation</h4>
-            <p class="card-text">
-              Formulated for aesthetic practitioners seeking comprehensive skin rejuvenation support.
-            </p>
-            <ul class="feature-list" style="margin-bottom: 20px">
-              <li style="font-size: 0.9rem">Overall skin quality</li>
-              <li style="font-size: 0.9rem">Vitality improvement</li>
-            </ul>
-          </div>
-          <!-- BioTHY -->
-          <div class="card">
-            <div class="card-img">
-              <img src="Bioseries/BioTHY.png" alt="BioTHY" />
-            </div>
-            <h3 class="card-title text-primary">BioTHY</h3>
-            <h4 class="mb-2 text-gold">Immune & Biological Balance</h4>
-            <p class="card-text">
-              Designed to complement regenerative treatment protocols by supporting biological balance and skin recovery.
-            </p>
-            <ul class="feature-list" style="margin-bottom: 20px">
-              <li style="font-size: 0.9rem">Immune wellness</li>
-              <li style="font-size: 0.9rem">Tissue recovery</li>
-            </ul>
+      <!-- Doctor 2 -->
+      <div class="doc-card">
+        <div class="doc-img-wrap">
+          <img src="About us/doc1.png" alt="Dr.med Thorsten Muthorst" loading="lazy" />
+        </div>
+        <div class="doc-title">Medical Expert</div>
+        <h3 class="doc-name">Dr.med Thorsten Muthorst</h3>
+      </div>
+      
+      <!-- Doctor 3 -->
+      <div class="doc-card">
+        <div class="doc-img-wrap">
+          <div style="width: 100%; height: 100%; display: flex; align-items: flex-end; justify-content: center; transform: scale(1.55) translateX(12%); transform-origin: center bottom;">
+            <img src="About us/DR.SAM4-.png" alt="Dr. Sam" loading="lazy" />
           </div>
         </div>
+        <div class="doc-title">Medical Expert</div>
+        <h3 class="doc-name">Dr. Sam</h3>
       </div>
+      
+      <!-- Doctor 4 -->
+      <div class="doc-card">
+        <div class="doc-img-wrap">
+          <img src="About us/doc3.png" alt="Dr. Mohammed A. Abdalqader" loading="lazy" />
+        </div>
+        <div class="doc-title">Medical Expert</div>
+        <h3 class="doc-name">Dr. Mohammed A. Abdalqader</h3>
+      </div>
+    </div>
+  </section>
 
-      <div class="animate-on-scroll">
-        <h3 class="text-primary text-center mb-4" style="font-size: 1.5rem;">Stem Cell Series</h3>
-        <div class="grid-3">
-          <!-- MEGA+ -->
-          <div class="card">
-            <div class="card-img">
-              <img src="StemCell/stem%20cell%20mega+.png" alt="MEGA+" />
-            </div>
-            <h3 class="card-title text-primary">Series: MEGA+</h3>
-            <h4 class="mb-2 text-gold">Formula: Cell Power G.C.A.F</h4>
-            <p class="card-text text-left mb-2" style="text-align: left;"><strong>Ingredient/Type:</strong> Mesenchymal Stem Cell</p>
-            <p class="card-text text-left" style="text-align: left;">
-              <strong>Usage:</strong> Described as a powerful formulation with cell peptides and proteins designed for overall vital organ support and immediate revitalization.
-            </p>
-          </div>
-          <!-- MACRO -->
-          <div class="card">
-            <div class="card-img">
-              <img src="StemCell/Stem%20cell%20macro.png" alt="MACRO" />
-            </div>
-            <h3 class="card-title text-primary">Series: MACRO</h3>
-            <h4 class="mb-2 text-gold">Formula: Cell Power G.C.A.F</h4>
-            <p class="card-text text-left mb-2" style="text-align: left;"><strong>Ingredient/Type:</strong> Thymus</p>
-            <p class="card-text text-left" style="text-align: left;">
-              <strong>Usage:</strong> Used for regulating and restoring physiological functions and cell structures, making it suitable for mid-to-long-term chronic disease management.
-            </p>
-          </div>
-          <!-- MICRO -->
-          <div class="card">
-            <div class="card-img">
-              <img src="StemCell/stemcell%20micro...png" alt="MICRO" />
-            </div>
-            <h3 class="card-title text-primary">Series: MICRO</h3>
-            <h4 class="mb-2 text-gold">Formula: Cell Power G.C.A.F</h4>
-            <p class="card-text text-left mb-2" style="text-align: left;"><strong>Ingredient/Type:</strong> Thymus</p>
-            <p class="card-text text-left" style="text-align: left;">
-              <strong>Usage:</strong> Focused on organ-specific nourishment and revitalization, particularly for connective tissue stimulation, skin tightening, and joint treatments.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- Products Gallery -->
+  <style>
+    /* ── Product Portfolio Section ── */
+    .portfolio-section {
+      background: linear-gradient(160deg, #f9fafa 0%, #ffffff 60%, #f4f8f6 100%);
+      padding: 80px 6%;
+    }
 
-    
-    <!-- Call to Action -->
-    <section class="section text-center section-bg">
-      <div class="animate-on-scroll" style="max-width: 600px; margin: 0 auto">
-        <h2 class="section-title">Begin Your Journey</h2>
-        <p class="mb-4 mt-3">
-          Your journey toward healthier aging and long-term vitality starts with a personalized consultation.
-        </p>
-        <a href="contact.html" class="btn btn-gold">Book an appointment</a>
-      </div>
-    </section>
+    .portfolio-series-label {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 40px;
+      padding-top: 40px;
+    }
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <img src="images/Logo.png" alt="OXYZ Health & Wellness" style="height: 50px; margin-bottom: 20px;">
-          <p>Advancing regenerative medicine by combining scientific innovation
-            with personalized wellness solutions.</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/OXYZHealthInternational"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/oxyz.bioseries?igsh=YjFvcmp1c2VwdjQ5"><i class="fab fa-instagram"></i></a>
-            <a href="https://international.oxyzhealth.com"><i class="fas fa-globe"></i></a>
+    .portfolio-series-label:first-of-type {
+      padding-top: 0;
+    }
+
+    .portfolio-series-label .series-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(210, 175, 96, 0.4));
+    }
+
+    .portfolio-series-label .series-line.right {
+      background: linear-gradient(90deg, rgba(210, 175, 96, 0.4), transparent);
+    }
+
+    .portfolio-series-label h3 {
+      font-family: var(--font-main);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--primary);
+      white-space: nowrap;
+      background: linear-gradient(135deg, var(--primary), #07a07c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── Product Grid ── */
+    .product-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      margin-bottom: 80px;
+    }
+
+    .product-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 80px;
+    }
+
+    /* ── Product Card ── */
+    .pcard {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 18px;
+      padding: 28px 20px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pcard::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 18px;
+      background: linear-gradient(160deg, rgba(5,120,92,0.03) 0%, rgba(210,175,96,0.04) 100%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+    }
+
+    .pcard:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 18px 40px rgba(5, 120, 92, 0.10), 0 4px 12px rgba(0,0,0,0.05);
+      border-color: rgba(210, 175, 96, 0.35);
+    }
+
+    .pcard:hover::after {
+      opacity: 1;
+    }
+
+    /* ── Product Image ── */
+    .pcard-img-wrap {
+      width: 100%;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .pcard-img-wrap img {
+      max-height: 170px;
+      max-width: 100%;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 20px rgba(0,0,0,0.10));
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .pcard:hover .pcard-img-wrap img {
+      transform: scale(1.08) translateY(-6px);
+    }
+
+    /* ── Product Info ── */
+    .pcard-badge {
+      display: inline-block;
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: var(--gold);
+      border-radius: 50px;
+      padding: 4px 12px;
+      margin-bottom: 12px;
+    }
+
+    .pcard-name {
+      font-family: var(--font-main);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .pcard-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 8px 20px;
+      border: 1.5px solid var(--primary);
+      border-radius: 50px;
+      transition: all 0.28s ease;
+      background: transparent;
+    }
+
+    .pcard-link:hover {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(5,120,92,0.25);
+    }
+
+    .pcard-link i {
+      font-size: 0.7rem;
+      transition: transform 0.25s ease;
+    }
+
+    .pcard-link:hover i {
+      transform: translateX(3px);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .product-grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .product-grid-3 { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .product-grid-4,
+      .product-grid-3 { grid-template-columns: 1fr 1fr; gap: 18px; }
+      .pcard { padding: 20px 14px 18px; }
+      .pcard-img-wrap { height: 140px; }
+      .pcard-img-wrap img { max-height: 130px; }
+      .pcard-name { font-size: 0.95rem; }
+    }
+  </style>
+
+  <section class="portfolio-section">
+    <div class="section-header animate-on-scroll">
+      <h2 class="section-title">Product Portfolio</h2>
+      <p class="section-subtitle mt-2">Premium regenerative solutions crafted for optimal results.</p>
+    </div>
+
+    <!-- BioSeries -->
+    <div class="animate-on-scroll">
+      <div class="portfolio-series-label">
+        <span class="series-line"></span>
+        <h3>OXYZ BioSeries</h3>
+        <span class="series-line right"></span>
+      </div>
+      <div class="product-grid-4">
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="Bioseries/BioCTS.png" alt="BioCTS" loading="lazy" />
           </div>
+          <span class="pcard-badge">Connective Tissue</span>
+          <h4 class="pcard-name">BioCTS</h4>
+          <a href="bioseries.html" class="pcard-link">Explore <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-                    <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="bioseries.html">BioSeries</a></li>
-            <li><a href="oxyz-cell.html">Stem Cell</a></li>
-            <li><a href="training.html">Training & Consultation</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="Bioseries/BioMSC.png" alt="BioMSC" loading="lazy" />
+          </div>
+          <span class="pcard-badge">Cellular Renewal</span>
+          <h4 class="pcard-name">BioMSC</h4>
+          <a href="bioseries.html" class="pcard-link">Explore <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <ul class="footer-links">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Quality Policy</a></li>
-          </ul>
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="Bioseries/BioPLC.png" alt="BioPLC" loading="lazy" />
+          </div>
+          <span class="pcard-badge">Skin Vitality</span>
+          <h4 class="pcard-name">BioPLC</h4>
+          <a href="bioseries.html" class="pcard-link">Explore <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="footer-col">
-          <h4>Contact Us</h4>
-          <ul class="footer-links">
-            <li >
-              <i
-                class="fas fa-map-marker-alt"
-                style="margin-right: 10px; color: var(--gold)"
-              ></i>
-              Irving Pl, #1-26, Singapore 369546
-            </li>
-            <li >
-              <i
-                class="fas fa-envelope"
-                style="margin-right: 10px; color: var(--gold)"
-              ></i>
-              contact@oxyzhealth.com
-            </li>
-            <li >
-              <i
-                class="fas fa-phone"
-                style="margin-right: 10px; color: var(--gold)"
-              ></i>
-              +65 8616 3762
-            </li>
-          </ul>
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="Bioseries/BioTHY.png" alt="BioTHY" loading="lazy" />
+          </div>
+          <span class="pcard-badge">Immune Balance</span>
+          <h4 class="pcard-name">BioTHY</h4>
+          <a href="bioseries.html" class="pcard-link">Explore <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 OXYZ Health & Wellness. All Rights Reserved.</p>
-      </div>
-    </footer>
+    </div>
 
-    <!-- Scripts -->
-    <!-- Distributor Modal -->
+    <!-- Stem Cell Series -->
+    <div class="animate-on-scroll">
+      <div class="portfolio-series-label">
+        <span class="series-line"></span>
+        <h3>OXYZ Stem Cell Series</h3>
+        <span class="series-line right"></span>
+      </div>
+      <div class="product-grid-3">
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="StemCell/stem%20cell%20mega+.png" alt="MEGA+" loading="lazy" />
+          </div>
+          <span class="pcard-badge">Cell Power G.C.A.F</span>
+          <h4 class="pcard-name">MEGA+</h4>
+          <a href="oxyz-cell.html" class="pcard-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="StemCell/Stem%20cell%20macro.png" alt="MACRO" loading="lazy" />
+          </div>
+          <span class="pcard-badge">Cell Power G.C.A.F</span>
+          <h4 class="pcard-name">MACRO</h4>
+          <a href="oxyz-cell.html" class="pcard-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="StemCell/stemcell%20micro...png" alt="MICRO" loading="lazy" />
+          </div>
+          <span class="pcard-badge">Cell Power G.C.A.F</span>
+          <h4 class="pcard-name">MICRO</h4>
+          <a href="oxyz-cell.html" class="pcard-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Targeted Wellness -->
+    <div class="animate-on-scroll">
+      <div class="portfolio-series-label">
+        <span class="series-line"></span>
+        <h3>Targeted Wellness Solutions</h3>
+        <span class="series-line right"></span>
+      </div>
+      <div class="product-grid-3">
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="Products/Gut+_2.png" alt="Gut+ Probiotic" loading="lazy" />
+          </div>
+          <span class="pcard-badge">Digestive Health</span>
+          <h4 class="pcard-name">Gut+ Probiotic</h4>
+          <a href="contact.html" class="pcard-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="Products/Meta%20Boost.png" alt="Meta Boost" loading="lazy" />
+          </div>
+          <span class="pcard-badge">Metabolic Support</span>
+          <h4 class="pcard-name">Meta Boost</h4>
+          <a href="contact.html" class="pcard-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="Products/Tribiomic.png" alt="Tribiomic" loading="lazy" />
+          </div>
+          <span class="pcard-badge">Microbiome Balance</span>
+          <h4 class="pcard-name">Tribiomic</h4>
+          <a href="contact.html" class="pcard-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="Products/immune%20breath+.png" alt="Immune Breath+" loading="lazy" />
+          </div>
+          <span class="pcard-badge">Respiratory Support</span>
+          <h4 class="pcard-name">Immune Breath+</h4>
+          <a href="contact.html" class="pcard-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="Products/Invinite%20Msc.png" alt="Infinite Oral MSC" loading="lazy" />
+          </div>
+          <span class="pcard-badge">Advanced Cellular</span>
+          <h4 class="pcard-name">Infinite Oral MSC</h4>
+          <a href="contact.html" class="pcard-link">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Call to Action -->
+  <section class="section text-center section-bg">
+    <div class="animate-on-scroll" style="max-width: 600px; margin: 0 auto">
+      <h2 class="section-title">Begin Your Journey</h2>
+      <p class="mb-4 mt-3">
+        Your journey toward healthier aging and long-term vitality starts with a personalized consultation.
+      </p>
+      <a href="contact.html" class="btn btn-gold">Book an appointment</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img src="images/Logo.png" alt="OXYZ Health & Wellness" style="height: 50px; margin-bottom: 20px;">
+        <p>Advancing regenerative medicine by combining scientific innovation
+          with personalized wellness solutions.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/OXYZHealthInternational"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/oxyz.bioseries?igsh=YjFvcmp1c2VwdjQ5"><i class="fab fa-instagram"></i></a>
+          <a href="https://international.oxyzhealth.com"><i class="fas fa-globe"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bioseries.html">BioSeries</a></li>
+          <li><a href="oxyz-cell.html">Stem Cell</a></li>
+          <li><a href="training.html">Training & Consultation</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Quality Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-links">
+          <li>
+            <i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--gold)"></i>
+            Irving Pl, #1-26, Singapore 369546
+          </li>
+          <li>
+            <i class="fas fa-envelope" style="margin-right: 10px; color: var(--gold)"></i>
+            contact@oxyzhealth.com
+          </li>
+          <li>
+            <i class="fas fa-phone" style="margin-right: 10px; color: var(--gold)"></i>
+            +65 8616 3762
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 OXYZ Health & Wellness. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Distributor Modal -->
   <div id="distributorModal" class="modal-overlay">
     <div class="modal-content">
       <button class="modal-close" onclick="closeDistributorModal()">&times;</button>
-      
+
       <div class="modal-header">
-        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;">HEALTH & WELLNESS</div>
+        <div
+          style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;">
+          HEALTH & WELLNESS</div>
         <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 8px;">Become a Distributor</h3>
-        <p style="font-size: 14px; color: var(--text-body); margin-bottom: 24px;">Tell us about your business &mdash; we'll follow up with territory availability and terms.</p>
+        <p style="font-size: 14px; color: var(--text-body); margin-bottom: 24px;">Tell us about your business &mdash;
+          we'll follow up with territory availability and terms.</p>
       </div>
 
       <form class="distributor-form" onsubmit="sendDistributorToWhatsApp(event)">
@@ -362,9 +628,9 @@
             <option value="kuwait">Kuwait</option>
             <option value="oman">Oman</option>
             <option value="bahrain">Bahrain</option>
-                <option value="malaysia">Malaysia</option>
-                <option value="singapore">Singapore</option>
-                <option value="usa">USA</option>
+            <option value="malaysia">Malaysia</option>
+            <option value="singapore">Singapore</option>
+            <option value="usa">USA</option>
             <option value="other">Other</option>
           </select>
         </div>
@@ -382,7 +648,9 @@
           <label>MESSAGE</label>
           <textarea id="distMessage" placeholder="Tell us about your business and goals" rows="4" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" style="width: 100%; background-color: var(--gold); border-color: var(--gold);">Submit Partnership Request</button>
+        <button type="submit" class="btn btn-primary"
+          style="width: 100%; background-color: var(--gold); border-color: var(--gold);">Submit Partnership
+          Request</button>
       </form>
     </div>
   </div>
@@ -390,24 +658,24 @@
   <script>
     function sendDistributorToWhatsApp(e) {
       e.preventDefault();
-      
+
       const name = document.getElementById('distName').value;
       const email = document.getElementById('distEmail').value;
       const phone = document.getElementById('distPhone').value;
       const company = document.getElementById('distCompany').value;
-      
+
       const countrySelect = document.getElementById('countrySelect');
       const countryText = countrySelect.options[countrySelect.selectedIndex].text;
-      
+
       const interestSelect = document.getElementById('distInterest');
       const interestText = interestSelect.options[interestSelect.selectedIndex].text;
-      
+
       const message = document.getElementById('distMessage').value;
-      
+
       const waMessage = `*New Partnership Request* 🤝\n-----------------------------------\n*Name:* ${name}\n*Email:* ${email}\n*Phone:* ${phone}\n*Company:* ${company}\n*Country:* ${countryText}\n*Interest:* ${interestText}\n\n*Message:*\n${message}\n-----------------------------------`;
-      
+
       const waUrl = `https://wa.me/6586163762?text=${encodeURIComponent(waMessage)}`;
-      
+
       window.open(waUrl, '_blank');
       closeDistributorModal();
     }
@@ -416,22 +684,23 @@
   <script src="js/script.js?v=5"></script>
   <script>
     function openDistributorModal(countryCode) {
-      if(countryCode) { document.getElementById('countrySelect').value = countryCode; }
+      if (countryCode) { document.getElementById('countrySelect').value = countryCode; }
       document.getElementById('distributorModal').classList.add('active');
     }
-    
+
     function closeDistributorModal() {
       document.getElementById('distributorModal').classList.remove('active');
     }
 
     // Close on click outside
-    document.getElementById('distributorModal').addEventListener('click', function(e) {
+    document.getElementById('distributorModal').addEventListener('click', function (e) {
       if (e.target === this) {
         closeDistributorModal();
       }
     });
   </script>
 
-    
+
 </body>
+
 </html>
