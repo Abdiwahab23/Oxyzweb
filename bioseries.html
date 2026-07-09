@@ -153,40 +153,250 @@
   </section>
 
   <!-- Introduction -->
-  <section class="section section-bg">
-    <div class="section-header animate-on-scroll">
-      <h2 class="section-title">What is OXYZ BioSeries?</h2>
-    </div>
-    <div class="img-text-block animate-on-scroll" style="align-items: center;">
-      <div class="crossfade-wrapper"
-        style="width: calc(100% + 10vw + 32px); margin-left: -10vw; border-top-left-radius: 0; border-bottom-left-radius: 0;">
-        <img src="Products/DSC07554.jpg" alt="BioSeries Product 1" class="crossfade-slide crossfade-1" />
+  <style>
+    .bioseries-intro {
+      padding: 0;
+      overflow: hidden;
+      background: #ffffff;
+      position: relative;
+    }
 
-        <img src="Products/DSC07542-3.jpg" alt="BioSeries Product 3" class="crossfade-slide crossfade-2" />
-        <img src="Products/DSC07537.jpg" alt="BioSeries Product 4" class="crossfade-slide crossfade-3" />
-        <img src="Bioseries/bioseries%20ads.PNG" alt="BioSeries Product 7" class="crossfade-slide crossfade-4" />
+    .bioseries-intro-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 620px;
+    }
+
+    /* LEFT — Image Panel */
+    .bioseries-img-panel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bioseries-img-panel .crossfade-wrapper {
+      width: 100%;
+      height: 100%;
+      min-height: 620px;
+      border-radius: 0;
+      margin: 0;
+    }
+
+    .bioseries-img-panel .crossfade-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
+    }
+
+    /* overlay gradient on image */
+    .bioseries-img-panel::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(5,120,92,0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Floating stat badges */
+    .bio-stat-badge {
+      position: absolute;
+      background: rgba(255,255,255,0.96);
+      border-radius: 16px;
+      padding: 14px 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      border-left: 4px solid var(--primary);
+      z-index: 5;
+    }
+
+    .bio-stat-badge.badge-1 { bottom: 40px; left: 28px; }
+    .bio-stat-badge.badge-2 { top: 36px; right: 28px; border-left-color: var(--gold); }
+
+    .bio-stat-badge .badge-val {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+    }
+
+    .bio-stat-badge.badge-2 .badge-val { color: var(--gold); }
+
+    .bio-stat-badge .badge-lbl {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* RIGHT — Content Panel */
+    .bioseries-content-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 72px 64px 72px 56px;
+      background: #ffffff;
+      position: relative;
+    }
+
+    /* Decorative top-right circle */
+    .bioseries-content-panel::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(210,175,96,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .bio-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 18px;
+    }
+
+    .bio-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .bioseries-content-panel h2 {
+      font-size: clamp(1.9rem, 3vw, 2.7rem);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+      letter-spacing: -0.03em;
+    }
+
+    .bioseries-content-panel h2 span {
+      color: var(--primary);
+    }
+
+    .bioseries-content-panel .bio-lead {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text-body);
+      margin-bottom: 32px;
+      border-left: 3px solid var(--gold);
+      padding-left: 16px;
+    }
+
+    .bioseries-content-panel .bio-body {
+      font-size: 0.97rem;
+      line-height: 1.78;
+      color: var(--text-body);
+      margin-bottom: 36px;
+    }
+
+    /* Feature pills */
+    .bio-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .bio-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #f3faf7;
+      border: 1px solid rgba(5,120,92,0.15);
+      border-radius: 50px;
+      padding: 8px 16px;
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .bio-pill i {
+      font-size: 0.75rem;
+      color: var(--gold);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .bioseries-intro-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .bioseries-img-panel .crossfade-wrapper {
+        min-height: 340px;
+      }
+
+      .bioseries-content-panel {
+        padding: 48px 28px;
+      }
+
+      .bio-stat-badge.badge-2 { top: 18px; right: 16px; }
+      .bio-stat-badge.badge-1 { bottom: 18px; left: 16px; }
+    }
+  </style>
+
+  <section class="bioseries-intro animate-on-scroll">
+    <div class="bioseries-intro-inner">
+
+      <!-- LEFT: Image -->
+      <div class="bioseries-img-panel">
+        <div class="crossfade-wrapper">
+          <img src="Products/DSC07554.jpg" alt="BioSeries Product 1" class="crossfade-slide crossfade-1" />
+          <img src="Products/DSC07542-3.jpg" alt="BioSeries Product 3" class="crossfade-slide crossfade-2" />
+          <img src="Products/DSC07537.jpg" alt="BioSeries Product 4" class="crossfade-slide crossfade-3" />
+          <img src="Bioseries/bioseries%20ads.PNG" alt="BioSeries Product 7" class="crossfade-slide crossfade-4" />
+        </div>
+
+        <!-- Floating Badges -->
+        <div class="bio-stat-badge badge-1">
+          <span class="badge-val">4 in 1</span>
+          <span class="badge-lbl">Targeted Bioseries</span>
+        </div>
+        <div class="bio-stat-badge badge-2">
+          <span class="badge-val">Pro</span>
+          <span class="badge-lbl">Clinical Grade</span>
+        </div>
       </div>
-      <div
-        style="text-align: left; font-size: clamp(1.15rem, 1.2vw + 0.4rem, 2.2rem); line-height: 1.8; color: var(--text-body);">
-        <p style="margin-bottom: clamp(1.5rem, 3vw, 4rem);">
-          <strong style="color: var(--primary); font-size: clamp(1.2rem, 1.3vw + 0.4rem, 2.4rem);">OXYZ
-            BioSeries</strong> is OXYZ Health & Wellness's professional regenerative product line developed specifically
-          for <strong style="color: var(--text-dark);">licensed healthcare professionals</strong>, aesthetic
-          practitioners, and medical clinics.
+
+      <!-- RIGHT: Content -->
+      <div class="bioseries-content-panel">
+        <div class="bio-eyebrow">Regenerative Science</div>
+
+        <h2>What is <span>OXYZ BioSeries</span>?</h2>
+
+        <p class="bio-lead">
+          OXYZ Health &amp; Wellness's <strong>professional regenerative product line</strong> — developed exclusively for licensed healthcare professionals, aesthetic practitioners, and medical clinics.
         </p>
-        <p style="margin-bottom: clamp(1.5rem, 3vw, 4rem);">
-          Inspired by the latest advances in <strong style="color: var(--primary);">regenerative medicine and biological
-            science</strong>, BioSeries products are formulated to complement modern aesthetic and regenerative
-          treatment protocols. By focusing on <strong style="color: var(--primary);">skin quality, tissue support, and
-            biological renewal</strong>, BioSeries helps practitioners deliver personalized care based on individual
-          patient needs.
+
+        <p class="bio-body">
+          Inspired by the latest advances in <strong>regenerative medicine and biological science</strong>, BioSeries products are formulated to complement modern aesthetic and regenerative treatment protocols. By focusing on <strong>skin quality, tissue support, and biological renewal</strong>, BioSeries helps practitioners deliver personalized care based on individual patient needs.
+          <br /><br />
+          Each formulation is designed with <strong>professional clinical use</strong> in mind and is intended to be administered as part of a <strong>comprehensive treatment strategy</strong> developed by qualified medical professionals.
         </p>
-        <p>
-          Each formulation is designed with <strong style="color: var(--text-dark);">professional clinical use</strong>
-          in mind and is intended to be administered as part of a <strong style="color: var(--text-dark);">comprehensive
-            treatment strategy</strong> developed by qualified medical professionals.
-        </p>
+
+        <!-- Feature Pills -->
+        <div class="bio-pills">
+          <span class="bio-pill"><i class="fas fa-dna"></i> Cellular Renewal</span>
+          <span class="bio-pill"><i class="fas fa-shield-alt"></i> Immune Support</span>
+          <span class="bio-pill"><i class="fas fa-leaf"></i> Skin Vitality</span>
+          <span class="bio-pill"><i class="fas fa-microscope"></i> Tissue Regeneration</span>
+          <span class="bio-pill"><i class="fas fa-user-md"></i> Professional Grade</span>
+        </div>
       </div>
+
     </div>
   </section>
 
