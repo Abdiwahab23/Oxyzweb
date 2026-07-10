@@ -216,74 +216,100 @@
     </div>
 
     <!-- FAQ -->
+    <style>
+      .faq-card {
+        background: white;
+        padding: 24px 30px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        cursor: pointer;
+        transition: box-shadow 0.3s ease;
+      }
+      .faq-card:hover {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      }
+      .faq-card summary {
+        list-style: none;
+        outline: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .faq-card summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq-card summary h4 {
+        margin: 0;
+        font-size: 1.05rem;
+        padding-right: 20px;
+      }
+      .faq-card .faq-icon {
+        font-size: 1.1rem;
+        color: var(--primary);
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+      }
+      .faq-card[open] .faq-icon {
+        transform: rotate(45deg);
+      }
+      .faq-card p {
+        margin-top: 16px;
+        margin-bottom: 0;
+        color: var(--text-body);
+        line-height: 1.6;
+      }
+    </style>
     <section class="section">
       <div class="section-header animate-on-scroll">
         <h2 class="section-title">Frequently Asked Questions</h2>
       </div>
       <div class="grid-2 animate-on-scroll">
-        <div
-          style="
-            background: white;
-            padding: 30px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-          "
-        >
-          <h4 class="mb-2 text-primary">Is consultation mandatory?</h4>
+        <details class="faq-card">
+          <summary>
+            <h4 class="text-primary">Is consultation mandatory?</h4>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </summary>
           <p>
             Yes. Every regenerative wellness program begins with a professional
             consultation to ensure recommendations are appropriate for your
             individual needs.
           </p>
-        </div>
-        <div
-          style="
-            background: white;
-            padding: 30px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-          "
-        >
-          <h4 class="mb-2 text-primary">
-            Can I consult before deciding on treatment?
-          </h4>
+        </details>
+        
+        <details class="faq-card">
+          <summary>
+            <h4 class="text-primary">Can I consult before deciding on treatment?</h4>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </summary>
           <p>
             Absolutely. The consultation is an opportunity to ask questions,
             understand available options, and discuss your wellness objectives
             before making any decisions.
           </p>
-        </div>
-        <div
-          style="
-            background: white;
-            padding: 30px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-          "
-        >
-          <h4 class="mb-2 text-primary">
-            Will I receive a personalized recommendation?
-          </h4>
+        </details>
+        
+        <details class="faq-card">
+          <summary>
+            <h4 class="text-primary">Will I receive a personalized recommendation?</h4>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </summary>
           <p>
             Yes. Based on your consultation and assessment, our healthcare
             professionals will recommend the most suitable wellness approach for
             your circumstances.
           </p>
-        </div>
-        <div
-          style="
-            background: white;
-            padding: 30px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-          "
-        >
-          <h4 class="mb-2 text-primary">How long does treatment take?</h4>
+        </details>
+        
+        <details class="faq-card">
+          <summary>
+            <h4 class="text-primary">How long does treatment take?</h4>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </summary>
           <p>
             Treatment duration varies depending on the individual's personalized
             wellness plan and clinical assessment.
           </p>
-        </div>
+        </details>
       </div>
     </section>
 
