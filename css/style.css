@@ -742,6 +742,13 @@ img {
   direction: ltr;
 }
 
+@media (min-width: 993px) {
+  #understanding-aging-block.img-text-block.reverse {
+    grid-template-columns: 1fr 1.4fr;
+    gap: 60px;
+  }
+}
+
 .img-text-block h2 {
   font-size: 1.6rem;
   margin-bottom: 16px;
