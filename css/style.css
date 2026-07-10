@@ -439,6 +439,187 @@ img {
   gap: 24px;
 }
 
+/* Hover Expanding Accordion */
+.accordion-gallery {
+  display: flex;
+  width: 100%;
+  height: 380px;
+  gap: 20px;
+}
+
+.accordion-item {
+  flex: 1;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: flex 0.7s cubic-bezier(0.25, 1, 0.3, 1), box-shadow 0.4s ease;
+  background: var(--bg-light);
+  border: 1px solid rgba(0,0,0,0.04);
+  text-decoration: none;
+  display: flex;
+  align-items: flex-end;
+  outline: none; /* Prevents blue focus ring on touch */
+}
+
+.accordion-item:hover,
+.accordion-item:focus,
+.accordion-item:focus-within {
+  flex: 3.5;
+  box-shadow: 0 20px 40px rgba(5,120,92,0.1);
+}
+
+.accordion-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease, filter 0.4s ease;
+  filter: grayscale(20%);
+}
+
+.accordion-item.contain {
+  background: linear-gradient(135deg, #fdfbfb 0%, #e2e8f0 100%);
+}
+
+.accordion-item.contain .accordion-img {
+  object-fit: cover;
+  padding: 0;
+  background: transparent;
+  mix-blend-mode: multiply;
+}
+
+.accordion-item:hover .accordion-img,
+.accordion-item:focus .accordion-img,
+.accordion-item:focus-within .accordion-img {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+.accordion-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 30%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.accordion-item:hover .accordion-overlay,
+.accordion-item:focus .accordion-overlay,
+.accordion-item:focus-within .accordion-overlay {
+  opacity: 1;
+}
+
+.accordion-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px 30px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+  width: 100%;
+  min-width: 320px;
+}
+
+.accordion-item:hover .accordion-content,
+.accordion-item:focus .accordion-content,
+.accordion-item:focus-within .accordion-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.accordion-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.accordion-text {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.accordion-link {
+  color: var(--primary);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+/* Default Floating Title (when collapsed) */
+.accordion-default-title {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  font-weight: 700;
+  color: var(--text-dark);
+  background: rgba(255,255,255,0.95);
+  padding: 10px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+}
+
+.accordion-item:hover .accordion-default-title,
+.accordion-item:focus .accordion-default-title,
+.accordion-item:focus-within .accordion-default-title {
+  opacity: 0;
+  transform: translate(-50%, 20px);
+  pointer-events: none;
+}
+
+@media (max-width: 992px) {
+  .accordion-gallery {
+    flex-direction: column;
+    height: auto;
+    gap: 24px;
+  }
+  .accordion-item {
+    width: 100%;
+    height: auto;
+    flex: none !important;
+    display: block; /* Stacks image and content */
+    background: var(--white);
+  }
+  .accordion-default-title {
+    display: none;
+  }
+  .accordion-overlay {
+    display: none; /* Remove gradient completely so image is clear */
+  }
+  .accordion-img {
+    position: relative; /* Take it out of absolute positioning */
+    height: 240px;
+    width: 100%;
+    filter: none;
+  }
+  .accordion-item.contain .accordion-img {
+    height: 200px;
+  }
+  .accordion-content {
+    position: relative;
+    transform: none; /* Remove the slide-up animation */
+    opacity: 1;
+    min-width: 100%;
+    padding: 24px;
+  }
+}
+
 .grid-5 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
