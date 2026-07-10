@@ -747,6 +747,11 @@ img {
     grid-template-columns: 1fr 1.4fr;
     gap: 60px;
   }
+  
+  .sticky-img-wrapper {
+    position: sticky;
+    top: 120px;
+  }
 }
 
 .img-text-block h2 {
