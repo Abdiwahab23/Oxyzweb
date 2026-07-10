@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (navLinks && !document.querySelector('.mobile-nav-header')) {
     const header = document.createElement('div');
     header.className = 'mobile-nav-header';
-    header.innerHTML = '<div style="display: flex; align-items: center; text-decoration: none;"><img src="images/Logo.png" alt="OXYZ Health" style="height: 32px;"></div><i class="fas fa-times close-menu"></i>';
+    header.innerHTML = '<div style="display: flex; align-items: center; text-decoration: none;"><img src="images/Logo%202.png" alt="OXYZ Health" style="height: 32px;"></div><i class="fas fa-times close-menu"></i>';
     navLinks.insertBefore(header, navLinks.firstChild);
     
     header.querySelector('.close-menu').addEventListener('click', () => {
