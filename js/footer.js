@@ -34,8 +34,10 @@ const footerHTML = `
           <h4>Contact Us</h4>
           <ul class="footer-links">
             <li class="footer-contact-item">
-              <i class="far fa-envelope" class="footer-contact-icon"></i>
-              global@oxyzhealth.com
+              <a href="mailto:global@oxyzhealth.com" class="footer-contact-link">
+                <i class="far fa-envelope" class="footer-contact-icon"></i>
+                global@oxyzhealth.com
+              </a>
             </li>
             <li class="footer-contact-item">
               <a href="tel:+6586163762" class="footer-contact-link">
