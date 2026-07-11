@@ -2,7 +2,7 @@ const footerHTML = `
     <footer class="footer">
       <div class="footer-grid">
         <div class="footer-col">
-          <img src="images/Logo%202.png" alt="OXYZ Health & Wellness" style="height: 50px; margin-bottom: 20px;">
+          <img src="images/Logo%202.png" alt="OXYZ Health & Wellness" class="footer-logo">
           <p>Advancing regenerative medicine by combining scientific innovation
             with personalized wellness solutions.</p>
           <div class="social-links">
@@ -33,18 +33,18 @@ const footerHTML = `
         <div class="footer-col">
           <h4>Contact Us</h4>
           <ul class="footer-links">
-            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-              <i class="far fa-envelope" style="font-size: 1.1rem;"></i>
+            <li class="footer-contact-item">
+              <i class="far fa-envelope" class="footer-contact-icon"></i>
               global@oxyzhealth.com
             </li>
-            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-              <a href="tel:+6586163762" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
-                <i class="fas fa-phone-alt" style="font-size: 1.1rem;"></i>
+            <li class="footer-contact-item">
+              <a href="tel:+6586163762" class="footer-contact-link">
+                <i class="fas fa-phone-alt" class="footer-contact-icon"></i>
                 +65 8616 3762
               </a>
             </li>
-            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-              <i class="fas fa-map-marker-alt" style="font-size: 1.1rem;"></i>
+            <li class="footer-contact-item">
+              <i class="fas fa-map-marker-alt" class="footer-contact-icon"></i>
               USA | Singapore | Malaysia
             </li>
           </ul>

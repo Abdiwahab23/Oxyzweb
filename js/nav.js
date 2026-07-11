@@ -1,7 +1,7 @@
 const navHTML = `
     <nav class="navbar scrolled">
-      <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;">
-        <img src="images/Logo%202.png" alt="OXYZ Health & Wellness" style="height: 40px" />
+      <a href="index.html" class="logo" >
+        <img src="images/Logo%202.png" alt="OXYZ Health & Wellness" class="logo-img" />
         <span class="logo-text">OXYZ <span class="logo-text-gold">Health & Wellness</span></span>
       </a>
       <div class="nav-links">
@@ -12,7 +12,7 @@ const navHTML = `
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
       </div>
-      <div class="nav-right" style="display: flex; align-items: center; gap: 20px; z-index: 1000;">
+      <div class="nav-right" >
         <div class="menu-toggle">
           <i class="fas fa-bars"></i>
         </div>
