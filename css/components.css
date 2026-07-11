@@ -1032,6 +1032,9 @@ textarea.form-control {
     grid-template-columns: 1fr;
     gap: 32px;
   }
+  .img-text-block > .img-wrapper {
+    order: -1;
+  }
 
   .grid-5 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
