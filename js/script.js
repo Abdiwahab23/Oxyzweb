@@ -24,31 +24,31 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.addEventListener("click", () => {
       navLinks.classList.toggle("active");
       document.body.classList.toggle("no-scroll");
-  // Mobile Menu Header & Active State
-  if (navLinks && !document.querySelector('.mobile-nav-header')) {
-    const header = document.createElement('div');
-    header.className = 'mobile-nav-header';
-    header.innerHTML = '<div style="display: flex; align-items: center; text-decoration: none;"><img src="images/Logo%202.png" alt="OXYZ Health" style="height: 32px;"></div><i class="fas fa-times close-menu"></i>';
-    navLinks.insertBefore(header, navLinks.firstChild);
-    
-    header.querySelector('.close-menu').addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      document.body.classList.remove('no-scroll');
-      const icon = document.querySelector('.menu-toggle i');
-      if (icon) {
-        icon.classList.add('fa-bars');
-        icon.classList.remove('fa-times');
-      }
-    });
+      // Mobile Menu Header & Active State
+      if (navLinks && !document.querySelector('.mobile-nav-header')) {
+        const header = document.createElement('div');
+        header.className = 'mobile-nav-header';
+        header.innerHTML = '<div style="display: flex; align-items: center; text-decoration: none;"><img src="images/Logo%202.png" alt="OXYZ Health" style="height: 32px;"></div><i class="fas fa-times close-menu"></i>';
+        navLinks.insertBefore(header, navLinks.firstChild);
 
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    const navItems = navLinks.querySelectorAll('a:not(.btn)');
-    navItems.forEach(a => {
-      if (a.getAttribute('href') === currentPath) {
-        a.classList.add('active-link');
+        header.querySelector('.close-menu').addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          document.body.classList.remove('no-scroll');
+          const icon = document.querySelector('.menu-toggle i');
+          if (icon) {
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-times');
+          }
+        });
+
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const navItems = navLinks.querySelectorAll('a:not(.btn)');
+        navItems.forEach(a => {
+          if (a.getAttribute('href') === currentPath) {
+            a.classList.add('active-link');
+          }
+        });
       }
-    });
-  }
       const icon = menuToggle.querySelector("i");
       if (icon) {
         icon.classList.toggle("fa-bars");
@@ -137,13 +137,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const prefix = target.getAttribute('data-prefix') || '';
         const suffix = target.getAttribute('data-suffix') || '';
         let currentNumber = 0;
-        
+
         // 90 frames = 1.5 seconds to match the progress bar CSS animation duration
-        const increment = targetNumber / 90; 
-        
+        const increment = targetNumber / 90;
+
         const updateCounter = () => {
           currentNumber += increment;
-          
+
           if ((increment > 0 && currentNumber >= targetNumber) || (increment < 0 && currentNumber <= targetNumber)) {
             target.innerText = prefix + targetNumber + suffix;
           } else {
@@ -151,31 +151,31 @@ document.addEventListener("DOMContentLoaded", () => {
             requestAnimationFrame(updateCounter);
           }
         };
-        
+
         // Short delay to match progress bar easing
         setTimeout(() => {
           updateCounter();
         }, 200);
-        
+
         observer.unobserve(target); // Only animate once
       }
     });
   }, { threshold: 0.5 });
-  
+
   counterElements.forEach(el => counterObserver.observe(el));
 });
 
 
 
 // Add WhatsApp floating widget
-document.addEventListener("DOMContentLoaded", function() {
-    const waWidget = document.createElement("a");
-    waWidget.href = "https://wa.me/6586163762";
-    waWidget.target = "_blank";
-    waWidget.className = "wa-float";
-    waWidget.innerHTML = `
+document.addEventListener("DOMContentLoaded", function () {
+  const waWidget = document.createElement("a");
+  waWidget.href = "https://wa.me/6586163762";
+  waWidget.target = "_blank";
+  waWidget.className = "wa-float";
+  waWidget.innerHTML = `
         <i class="fab fa-whatsapp"></i>
         <span class="wa-tooltip">Chat with us!</span>
     `;
-    document.body.appendChild(waWidget);
+  document.body.appendChild(waWidget);
 });
