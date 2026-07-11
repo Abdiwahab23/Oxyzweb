@@ -928,8 +928,8 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: rgba(210, 175, 96, 0.1);
-  color: var(--gold);
+  background: var(--gold);
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -939,8 +939,6 @@
 }
 
 .contact-item:hover .contact-icon-wrapper {
-  background: var(--gold);
-  color: var(--white);
   transform: scale(1.05);
 }
 
@@ -957,13 +955,12 @@
 }
 
 .contact-item.contact-whatsapp .contact-icon-wrapper {
-  background: rgba(37, 211, 102, 0.1);
-  color: #25d366;
+  background: #25d366;
+  color: var(--white);
 }
 
 .contact-item.contact-whatsapp:hover .contact-icon-wrapper {
-  background: #25d366;
-  color: var(--white);
+  transform: scale(1.05);
 }
 
 
