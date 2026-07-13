@@ -17,17 +17,14 @@ const footerHTML = `
             <li><a href="index.html">Home</a></li>
             <li><a href="bioseries.html">BioSeries</a></li>
             <li><a href="oxyz-cell.html">Stem Cell</a></li>
-            <li><a href="training.html">Training & Consultation</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4>Explore</h4>
           <ul class="footer-links">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Quality Policy</a></li>
+            <li><a href="training.html">Training & Consultation</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
         <div class="footer-col">
