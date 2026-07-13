@@ -944,13 +944,13 @@
 
 .contact-item h4 {
   margin-bottom: 4px;
-  font-size: 1.05rem;
+  font-size: 15px;
   color: var(--primary-dark);
 }
 
 .contact-item p {
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 14px;
   line-height: 1.5;
 }
 
