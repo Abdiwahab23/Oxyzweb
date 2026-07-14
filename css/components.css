@@ -28,18 +28,19 @@
   overflow: hidden;
   transition: flex 0.7s cubic-bezier(0.25, 1, 0.3, 1), box-shadow 0.4s ease;
   background: var(--bg-light);
-  border: 1px solid rgba(0,0,0,0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
   text-decoration: none;
   display: flex;
   align-items: flex-end;
-  outline: none; /* Prevents blue focus ring on touch */
+  outline: none;
+  /* Prevents blue focus ring on touch */
 }
 
 .accordion-item:hover,
 .accordion-item:focus,
 .accordion-item:focus-within {
   flex: 3.5;
-  box-shadow: 0 20px 40px rgba(5,120,92,0.1);
+  box-shadow: 0 20px 40px rgba(5, 120, 92, 0.1);
 }
 
 .accordion-img {
@@ -77,7 +78,7 @@
   left: 0;
   width: 100%;
   height: 70%;
-  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 30%, transparent 100%);
+  background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9) 30%, transparent 100%);
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 1;
@@ -140,12 +141,12 @@
   z-index: 3;
   font-weight: 700;
   color: var(--text-dark);
-  background: rgba(255,255,255,0.95);
+  background: rgba(255, 255, 255, 0.95);
   padding: 10px 16px;
   border-radius: 30px;
   font-size: 0.85rem;
   white-space: nowrap;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease;
 }
 
@@ -163,31 +164,41 @@
     height: auto;
     gap: 24px;
   }
+
   .accordion-item {
     width: 100%;
     height: auto;
     flex: none !important;
-    display: block; /* Stacks image and content */
+    display: block;
+    /* Stacks image and content */
     background: var(--white);
   }
+
   .accordion-default-title {
     display: none;
   }
+
   .accordion-overlay {
-    display: none; /* Remove gradient completely so image is clear */
+    display: none;
+    /* Remove gradient completely so image is clear */
   }
+
   .accordion-img {
-    position: relative; /* Take it out of absolute positioning */
+    position: relative;
+    /* Take it out of absolute positioning */
     height: 240px;
     width: 100%;
     filter: none;
   }
+
   .accordion-item.contain .accordion-img {
     height: 200px;
   }
+
   .accordion-content {
     position: relative;
-    transform: none; /* Remove the slide-up animation */
+    transform: none;
+    /* Remove the slide-up animation */
     opacity: 1;
     min-width: 100%;
     padding: 24px;
@@ -321,7 +332,7 @@
     grid-template-columns: 1fr 1.4fr;
     gap: 60px;
   }
-  
+
   .sticky-img-wrapper {
     position: sticky;
     top: 120px;
@@ -1029,7 +1040,8 @@ textarea.form-control {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  .img-text-block > .img-wrapper {
+
+  .img-text-block>.img-wrapper {
     order: -1;
   }
 
@@ -1548,31 +1560,37 @@ body {
 }
 }
 }
+
 /* Refactored Inline Styles */
 .navbar .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
+
 .navbar .logo-img {
   height: 40px;
 }
+
 .nav-right {
   display: flex;
   align-items: center;
   gap: 20px;
   z-index: 1000;
 }
+
 .footer-logo {
   height: 50px;
   margin-bottom: 20px;
 }
+
 .footer-contact-item {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
 }
+
 .footer-contact-link {
   display: flex;
   align-items: center;
@@ -1580,6 +1598,7 @@ body {
   text-decoration: none;
   color: inherit;
 }
+
 .footer-contact-icon {
   font-size: 1.1rem;
 }
