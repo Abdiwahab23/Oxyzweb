@@ -1,231 +1,219 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="OXYZ Health & Wellness Professional Training & Consultation - Advancing Knowledge in Regenerative Medicine."
-    />
-    <title>OXYZ Health & Wellness | Training & Consultation</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&family=Lora:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="OXYZ Health & Wellness Professional Training & Consultation - Advancing Knowledge in Regenerative Medicine." />
+  <title>OXYZ Health & Wellness | Training & Consultation</title>
 
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css?v=7" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/Logo%202.png" />
-  </head>
-  <body>
-    
-    <!-- Navigation Bar -->
-    <div id="nav-placeholder"></div>
-    <script src="js/nav.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css?v=7" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- Hero Section -->
-    <header
-      class="hero hero-training"
-      style="
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/Logo%202.png" />
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <div id="nav-placeholder"></div>
+  <script src="js/nav.js"></script>
+
+  <!-- Hero Section -->
+  <header class="hero hero-training" style="
         background-image: url(&quot;Training/Untitled-5969-opt.jpg&quot;);
         background-position: center 30%;
-      "
-    >
-      <style>
-        .hero-training::before {
-          background: linear-gradient(to right, rgba(15, 60, 85, 0.9) 0%, rgba(138, 77, 34, 0.8) 100%);
-        }
+      ">
+    <style>
+      .hero-training::before {
+        background: linear-gradient(to right, rgba(15, 60, 85, 0.9) 0%, rgba(138, 77, 34, 0.8) 100%);
+      }
+
+      .hero-training .hero-title {
+        font-family: 'Lora', serif;
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 1.15;
+        margin-bottom: 24px;
+        letter-spacing: -0.01em;
+      }
+
+      @media (max-width: 768px) {
         .hero-training .hero-title {
-          font-family: 'Lora', serif;
-          font-size: 3.2rem;
-          font-weight: 600;
-          line-height: 1.15;
-          margin-bottom: 24px;
-          letter-spacing: -0.01em;
+          font-size: 1.5rem;
+          line-height: 1.3;
+          padding: 0 10px;
         }
-        @media (max-width: 768px) {
-          .hero-training .hero-title {
-            font-size: 1.5rem;
-            line-height: 1.3;
-            padding: 0 10px;
-          }
-        }
-      </style>
-      <div class="hero-content text-center" style="margin: 0 auto;">
-        <h1 class="hero-title">OXYZ Professional <br><span style="color: #f7b779;">Training & Consultation</span></h1>
-        <p class="hero-subtitle">
-          Advancing Knowledge in Regenerative Medicine. Expand your expertise
-          through OXYZ's professional training programs designed for healthcare
-          practitioners, aesthetic professionals, and wellness providers.
+      }
+    </style>
+    <div class="hero-content text-center" style="margin: 0 auto;">
+      <h1 class="hero-title">OXYZ Professional <br><span style="color: #f7b779;">Training & Consultation</span></h1>
+      <p class="hero-subtitle">
+        Advancing Knowledge in Regenerative Medicine. Expand your expertise
+        through OXYZ's professional training programs designed for healthcare
+        practitioners, aesthetic professionals, and wellness providers.
+      </p>
+      <div class="hero-buttons" style="justify-content: center;">
+        <a href="#training" class="btn btn-primary">Training Programs</a>
+        <a href="#consultation" class="btn btn-outline">Consultation Services</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Training Programs Section -->
+  <section id="training" class="section">
+    <div class="section-header animate-on-scroll">
+      <h2 class="section-title">Professional Training Programs</h2>
+      <p class="section-subtitle mt-2">Learn from Industry Professionals</p>
+    </div>
+
+    <div class="grid-2 animate-on-scroll">
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3 class="card-title">Stem Cell Therapy Fundamentals</h3>
+        <p class="card-text">
+          Gain a strong foundation in regenerative medicine, stem cell
+          biology, and cellular therapies.
         </p>
-        <div class="hero-buttons" style="justify-content: center;">
-          <a href="#training" class="btn btn-primary">Training Programs</a>
-          <a href="#consultation" class="btn btn-outline"
-            >Consultation Services</a
-          >
-        </div>
-      </div>
-    </header>
-
-    <!-- Training Programs Section -->
-    <section id="training" class="section">
-      <div class="section-header animate-on-scroll">
-        <h2 class="section-title">Professional Training Programs</h2>
-        <p class="section-subtitle mt-2">Learn from Industry Professionals</p>
+        <ul class="feature-list">
+          <li>Introduction to regenerative medicine</li>
+          <li>Stem cell science & cell therapy principles</li>
+          <li>Healthy aging concepts</li>
+        </ul>
       </div>
 
-      <div class="grid-2 animate-on-scroll">
-        <div class="card">
-          <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
-          <h3 class="card-title">Stem Cell Therapy Fundamentals</h3>
-          <p class="card-text">
-            Gain a strong foundation in regenerative medicine, stem cell
-            biology, and cellular therapies.
-          </p>
-          <ul class="feature-list">
-            <li>Introduction to regenerative medicine</li>
-            <li>Stem cell science & cell therapy principles</li>
-            <li>Healthy aging concepts</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-icon"><i class="fas fa-notes-medical"></i></div>
-          <h3 class="card-title">Regenerative Medicine Applications</h3>
-          <p class="card-text">
-            Explore how regenerative medicine is being incorporated into modern
-            healthcare and wellness practices.
-          </p>
-          <ul class="feature-list">
-            <li>Personalized treatment planning</li>
-            <li>Biological regeneration & preventive healthcare</li>
-            <li>Patient-centered care</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-icon"><i class="fas fa-box-open"></i></div>
-          <h3 class="card-title">BioSeries Product Training</h3>
-          <p class="card-text">
-            Learn about the OXYZ BioSeries professional product line,
-            formulation concepts, and intended use.
-          </p>
-          <ul class="feature-list">
-            <li>Product overview & regenerative concepts</li>
-            <li>Integration into professional aesthetic practice</li>
-            <li>Professional best practices</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-icon"><i class="fas fa-user-md"></i></div>
-          <h3 class="card-title">Clinical Consultation & Patient Assessment</h3>
-          <p class="card-text">
-            Develop practical skills in conducting professional consultations
-            and designing personalized wellness recommendations.
-          </p>
-          <ul class="feature-list">
-            <li>Medical history review & patient assessment</li>
-            <li>Wellness planning & communication strategies</li>
-            <li>Follow-up protocols</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Consultation Section -->
-    <section id="consultation" class="section section-bg">
-      <div class="section-header animate-on-scroll">
-        <h2 class="section-title">Personalized Health Consultation</h2>
-        <p class="section-subtitle mt-2">Your Wellness Journey Starts Here</p>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-notes-medical"></i></div>
+        <h3 class="card-title">Regenerative Medicine Applications</h3>
+        <p class="card-text">
+          Explore how regenerative medicine is being incorporated into modern
+          healthcare and wellness practices.
+        </p>
+        <ul class="feature-list">
+          <li>Personalized treatment planning</li>
+          <li>Biological regeneration & preventive healthcare</li>
+          <li>Patient-centered care</li>
+        </ul>
       </div>
 
-      <div class="img-text-block animate-on-scroll">
-        <div class="img-wrapper">
-          <img
-            src="Training/Untitled-5955.webp"
-            alt="Consultation"
-            style="border-radius: var(--radius); width: 100%; height: auto; object-fit: cover;"
-          />
-        </div>
-        <div>
-          <h3 class="mb-3">Why Consultation Matters</h3>
-          <p class="mb-3">
-            A successful wellness journey begins with understanding the
-            individual. Every regenerative wellness program at OXYZ begins with
-            a comprehensive consultation to better understand your health goals,
-            lifestyle, and medical history.
-          </p>
-          <ul class="feature-list mb-4">
-            <li>Understand your health concerns</li>
-            <li>Review your medical history & assess lifestyle factors</li>
-            <li>Recommend suitable regenerative programs</li>
-            <li>Develop a personalized care plan</li>
-          </ul>
-          <a href="contact.html" class="btn btn-primary"
-            >Book Your Consultation</a
-          >
-        </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-box-open"></i></div>
+        <h3 class="card-title">BioSeries Product Training</h3>
+        <p class="card-text">
+          Learn about the OXYZ BioSeries professional product line,
+          formulation concepts, and intended use.
+        </p>
+        <ul class="feature-list">
+          <li>Product overview & regenerative concepts</li>
+          <li>Integration into professional aesthetic practice</li>
+          <li>Professional best practices</li>
+        </ul>
       </div>
-    </section>
 
-    <!-- Who Should Attend/Benefit -->
-    <section class="section">
-      <div class="section-header animate-on-scroll">
-        <h2 class="section-title">Who Can Benefit?</h2>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-user-md"></i></div>
+        <h3 class="card-title">Clinical Consultation & Patient Assessment</h3>
+        <p class="card-text">
+          Develop practical skills in conducting professional consultations
+          and designing personalized wellness recommendations.
+        </p>
+        <ul class="feature-list">
+          <li>Medical history review & patient assessment</li>
+          <li>Wellness planning & communication strategies</li>
+          <li>Follow-up protocols</li>
+        </ul>
       </div>
-      <div class="grid-3 animate-on-scroll text-center">
-        <div class="card">
-          <h3 class="mb-3 text-gold">For Professionals</h3>
-          <p>
-            Medical Doctors, Aesthetic Physicians, Dermatologists, Integrative
-            Medicine Practitioners, and Wellness Clinic Owners seeking to expand
-            their knowledge in regenerative medicine.
-          </p>
-        </div>
-        <div class="card">
-          <h3 class="mb-3 text-gold">For Patients</h3>
-          <p>
-            Individuals seeking personalized regenerative wellness guidance,
-            healthy aging strategies, cellular wellness, immune health, and
-            vitality improvements.
-          </p>
-        </div>
-        <div class="card">
-          <h3 class="mb-3 text-gold">For Clinics</h3>
-          <p>
-            Medical Spas and Healthcare Clinics looking to integrate advanced
-            BioSeries products and cell therapy principles into their
-            professional practice.
-          </p>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Symposium & Training Gallery -->
-    <section class="section section-bg">
-      <div class="section-header animate-on-scroll">
-        <h2 class="section-title">Our Symposiums & Trainings</h2>
-        <p class="section-subtitle mt-2">
-          Empowering professionals through education and collaboration.
+  <!-- Consultation Section -->
+  <section id="consultation" class="section section-bg">
+    <div class="section-header animate-on-scroll">
+      <h2 class="section-title">Personalized Health Consultation</h2>
+      <p class="section-subtitle mt-2">Your Wellness Journey Starts Here</p>
+    </div>
+
+    <div class="img-text-block animate-on-scroll">
+      <div class="img-wrapper">
+        <img src="Training/Untitled-5955.webp" alt="Consultation"
+          style="border-radius: var(--radius); width: 100%; height: auto; object-fit: cover;" />
+      </div>
+      <div>
+        <h3 class="mb-3">Why Consultation Matters</h3>
+        <p class="mb-3">
+          A successful wellness journey begins with understanding the
+          individual. Every regenerative wellness program at OXYZ begins with
+          a comprehensive consultation to better understand your health goals,
+          lifestyle, and medical history.
+        </p>
+        <ul class="feature-list mb-4">
+          <li>Understand your health concerns</li>
+          <li>Review your medical history & assess lifestyle factors</li>
+          <li>Recommend suitable regenerative programs</li>
+          <li>Develop a personalized care plan</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Book Your Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Should Attend/Benefit -->
+  <section class="section">
+    <div class="section-header animate-on-scroll">
+      <h2 class="section-title">Who Can Benefit?</h2>
+    </div>
+    <div class="grid-3 animate-on-scroll text-center">
+      <div class="card">
+        <h3 class="mb-3 text-gold">For Professionals</h3>
+        <p>
+          Medical Doctors, Aesthetic Physicians, Dermatologists, Integrative
+          Medicine Practitioners, and Wellness Clinic Owners seeking to expand
+          their knowledge in regenerative medicine.
         </p>
       </div>
-      <div class="training-slider-container animate-on-scroll">
-        <div class="swiper training-slider">
-          <div class="swiper-wrapper">
+      <div class="card">
+        <h3 class="mb-3 text-gold">For Patients</h3>
+        <p>
+          Individuals seeking personalized regenerative wellness guidance,
+          healthy aging strategies, cellular wellness, immune health, and
+          vitality improvements.
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="mb-3 text-gold">For Clinics</h3>
+        <p>
+          Medical Spas and Healthcare Clinics looking to integrate advanced
+          BioSeries products and cell therapy principles into their
+          professional practice.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Symposium & Training Gallery -->
+  <section class="section section-bg">
+    <div class="section-header animate-on-scroll">
+      <h2 class="section-title">Our Symposiums & Trainings</h2>
+      <p class="section-subtitle mt-2">
+        Empowering professionals through education and collaboration.
+      </p>
+    </div>
+    <div class="training-slider-container animate-on-scroll">
+      <div class="swiper training-slider">
+        <div class="swiper-wrapper">
           <div class="swiper-slide gallery-item">
             <img src="Training/Untitled-5907-opt.jpg" alt="Training Symposium" />
           </div>
@@ -262,56 +250,57 @@
           <div class="swiper-slide gallery-item">
             <img src="Training/Untitled-5979.webp" alt="Training Symposium" />
           </div>
-          </div>
         </div>
-        <!-- Navigation Buttons -->
-        <div class="swiper-button-prev slider-nav-btn"></div>
-        <div class="swiper-button-next slider-nav-btn"></div>
       </div>
-    </section>
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-prev slider-nav-btn"></div>
+      <div class="swiper-button-next slider-nav-btn"></div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <div id="footer-placeholder"></div>
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/script.js?v=5"></script>
-  
-    
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js?v=5"></script>
+
+
   <script src="js/modal.js"></script>
-    <script src="js/footer.js"></script>
+  <script src="js/footer.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        const swiper = new Swiper('.training-slider', {
-          slidesPerView: 1,
-          spaceBetween: 16,
-          loop: true,
-          autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
+  <!-- Initialize Swiper -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const swiper = new Swiper('.training-slider', {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
           },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 24,
           },
-          breakpoints: {
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 24,
-            },
-            1280: {
-              slidesPerView: 4,
-              spaceBetween: 24,
-            },
-          }
-        });
+          1280: {
+            slidesPerView: 4,
+            spaceBetween: 24,
+          },
+        }
       });
-    </script>
+    });
+  </script>
 </body>
+
 </html>
