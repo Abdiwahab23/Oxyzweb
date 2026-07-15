@@ -1602,3 +1602,81 @@ body {
 .footer-contact-icon {
   font-size: 1.1rem;
 }
+
+/* ======================== */
+/* Swiper Slider Overrides   */
+/* ======================== */
+.training-slider-container {
+  position: relative;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .training-slider-container {
+    padding: 0 60px;
+  }
+}
+
+.training-slider {
+  padding: 10px 0 20px;
+}
+
+.training-slider-container .slider-nav-btn {
+  background-color: var(--white);
+  border: 2px solid #eb6d20;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-top: -24px;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .training-slider-container .slider-nav-btn {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.training-slider-container .slider-nav-btn::after {
+  font-size: 16px !important;
+  font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  .training-slider-container .slider-nav-btn::after {
+    font-size: 18px !important;
+  }
+}
+
+.training-slider-container .slider-nav-btn:hover {
+  background-color: #eb6d20;
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+.training-slider-container .swiper-button-prev {
+  left: -10px;
+}
+
+.training-slider-container .swiper-button-next {
+  right: -10px;
+}
+
+@media (min-width: 768px) {
+  .training-slider-container .swiper-button-prev {
+    left: 0;
+  }
+
+  .training-slider-container .swiper-button-next {
+    right: 0;
+  }
+}
+
+.training-slider .gallery-item {
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
