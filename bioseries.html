@@ -51,7 +51,7 @@
         padding: 0;
         min-height: 75vh;
       }
-      
+
       .hero-bio-split::before {
         content: '';
         position: absolute;
@@ -60,7 +60,7 @@
         z-index: 0;
         pointer-events: none;
       }
-      
+
       .hero-bio-split .hero-right {
         position: absolute;
         top: 0;
@@ -71,7 +71,7 @@
         -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
         mask-image: linear-gradient(to right, transparent 0%, black 30%);
       }
-      
+
       .hero-bio-split .hero-right img {
         width: 100%;
         height: 100%;
@@ -88,6 +88,7 @@
         max-width: 55%;
         box-sizing: border-box;
       }
+
       .hero-bio-split .hero-title {
         font-family: 'Lora', serif;
         font-size: 3.8rem;
@@ -97,24 +98,28 @@
         letter-spacing: -0.01em;
         color: #ffffff;
       }
+
       .hero-bio-split .hero-subtitle {
         color: rgba(255, 255, 255, 0.95);
-        font-size: 0.95rem; /* Reduced font size even further */
+        font-size: 0.95rem;
+        /* Reduced font size even further */
         line-height: 1.5;
         max-width: 550px;
         margin-bottom: 32px;
       }
+
       .hero-bio-split .hero-buttons {
         display: flex;
         gap: 15px;
         justify-content: flex-start;
       }
-      
+
       @media (max-width: 1200px) {
         .hero-bio-split .hero-title {
           font-size: 2.8rem;
           white-space: nowrap;
         }
+
         .hero-bio-split .hero-content-left {
           padding: 60px 4%;
         }
@@ -127,6 +132,7 @@
           background-position: center 85%;
           background-size: 140% auto;
         }
+
         .hero-bio-split .hero-right {
           position: relative;
           width: 100%;
@@ -136,27 +142,31 @@
           -webkit-mask-image: linear-gradient(to top, transparent 0%, black 30%) !important;
           mask-image: linear-gradient(to top, transparent 0%, black 30%) !important;
         }
+
         .hero-bio-split .hero-content-left {
           width: 100%;
           max-width: 100%;
           padding: 20px 20px 60px;
           text-align: center;
         }
+
         .hero-bio-split .hero-subtitle {
           max-width: 100%;
           font-size: 1.05rem;
           margin-left: auto;
           margin-right: auto;
         }
+
         .hero-bio-split .hero-buttons {
           justify-content: center;
         }
+
         .hero-bio-split .hero-title {
           font-size: 2.5rem;
         }
       }
     </style>
-    
+
     <div class="hero-content-left">
       <h1 class="hero-title">OXYZ <span style="color: #f7b779;">BioSeries</span></h1>
       <p class="hero-subtitle">
@@ -165,7 +175,8 @@
         regeneration, and professional aesthetic treatments.
       </p>
       <div class="hero-buttons">
-        <a href="#products" class="btn btn-primary" style="background-color: #d4a000; border-color: #d4a000; color: #fff;">Explore Products</a>
+        <a href="#products" class="btn btn-primary"
+          style="background-color: #d4a000; border-color: #d4a000; color: #fff;">Explore Products</a>
         <a href="contact.html" class="btn btn-outline" style="border-color: #fff; color: #fff;">Request Information</a>
       </div>
     </div>
@@ -191,7 +202,7 @@
           <strong>Usage:</strong> Formulated to support regenerative aesthetic procedures by focusing on tissue quality
           and biological renewal.
         </p>
-        <a href="contact.html" class="btn btn-outline-primary" style="margin-top: 16px; align-self: flex-start;">Learn
+        <a href="BioMSC.html" class="btn btn-outline-primary" style="margin-top: 16px; align-self: flex-start;">Learn
           More</a>
       </div>
 
@@ -686,8 +697,52 @@
     </div>
   </section>
 
-  <!-- Clinical Results / Before and After -->
-  <section class="section">
+  <!-- Clinical Results / Before and After Collection -->
+  <style>
+    .clinical-results-bg {
+      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+      padding: 80px 0;
+      position: relative;
+    }
+    
+    .clinical-collection {
+      position: relative;
+      max-width: 1400px;
+      margin: 40px auto 0;
+      padding: 0 4%;
+    }
+
+    .clinical-card {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(5, 120, 92, 0.08);
+      background: var(--white);
+      transition: all 0.4s ease;
+      border: 1px solid rgba(5, 120, 92, 0.05);
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .clinical-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(5, 120, 92, 0.15);
+      border-color: rgba(212, 160, 0, 0.3);
+    }
+
+    .clinical-card img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+    }
+  </style>
+
+  <section class="section clinical-results-bg">
     <div class="section-header animate-on-scroll">
       <h2 class="section-title">Clinical Results</h2>
       <p class="section-subtitle mt-2">
@@ -695,42 +750,36 @@
         structural integrity.
       </p>
     </div>
-    <div class="grid-2 animate-on-scroll">
-      <div class="before-after-card">
-        <img src="Bioseries/before and after.jpeg" alt="BioSeries Before and After Result 1"
-          class="before-after-img lightbox-trigger" />
-      </div>
-      <div class="before-after-card">
-        <img src="Bioseries/before and after2.jpeg" alt="BioSeries Before and After Result 2"
-          class="before-after-img lightbox-trigger" />
-      </div>
-      <div class="before-after-card">
-        <img src="Bioseries/before and after 3.jpeg" alt="BioSeries Before and After Result 3"
-          class="before-after-img lightbox-trigger" />
-      </div>
-      <div class="before-after-card">
-        <img src="Bioseries/before and after 4.jpeg" alt="BioSeries Before and After Result 4"
-          class="before-after-img lightbox-trigger" />
-      </div>
-      <div class="before-after-card">
-        <img src="Bioseries/Before%20%26%20After%20Poster_With%20Product-11.png"
-          alt="BioSeries Before and After Result 9" class="before-after-img lightbox-trigger" />
-      </div>
-      <div class="before-after-card">
-        <img src="Bioseries/Before%20%26%20After%20Poster_With%20Product-07.png"
-          alt="BioSeries Before and After Result 5" class="before-after-img lightbox-trigger" />
-      </div>
-      <div class="before-after-card">
-        <img src="Bioseries/Before%20%26%20After%20Poster_With%20Product-08.png"
-          alt="BioSeries Before and After Result 6" class="before-after-img lightbox-trigger" />
-      </div>
-      <div class="before-after-card">
-        <img src="Bioseries/Before%20%26%20After%20Poster_With%20Product-09.png"
-          alt="BioSeries Before and After Result 7" class="before-after-img lightbox-trigger" />
-      </div>
-      <div class="before-after-card">
-        <img src="Bioseries/Before%20%26%20After%20Poster_With%20Product-10.png"
-          alt="BioSeries Before and After Result 8" class="before-after-img lightbox-trigger" />
+    
+    <div class="clinical-collection animate-on-scroll">
+      <div class="grid-3">
+        <div class="clinical-card">
+          <img src="Bioseries/before and after.jpeg" alt="BioSeries Before and After Result 1" class="lightbox-trigger" />
+        </div>
+        <div class="clinical-card">
+          <img src="Bioseries/before and after2.jpeg" alt="BioSeries Before and After Result 2" class="lightbox-trigger" />
+        </div>
+        <div class="clinical-card">
+          <img src="Bioseries/before and after 3.jpeg" alt="BioSeries Before and After Result 3" class="lightbox-trigger" />
+        </div>
+        <div class="clinical-card">
+          <img src="Bioseries/before and after 4.jpeg" alt="BioSeries Before and After Result 4" class="lightbox-trigger" />
+        </div>
+        <div class="clinical-card">
+          <img src="Bioseries/Before%20%26%20After%20Poster_With%20Product-11.png" alt="BioSeries Before and After Result 9" class="lightbox-trigger" />
+        </div>
+        <div class="clinical-card">
+          <img src="Bioseries/Before%20%26%20After%20Poster_With%20Product-07.png" alt="BioSeries Before and After Result 5" class="lightbox-trigger" />
+        </div>
+        <div class="clinical-card">
+          <img src="Bioseries/Before%20%26%20After%20Poster_With%20Product-08.png" alt="BioSeries Before and After Result 6" class="lightbox-trigger" />
+        </div>
+        <div class="clinical-card">
+          <img src="Bioseries/Before%20%26%20After%20Poster_With%20Product-09.png" alt="BioSeries Before and After Result 7" class="lightbox-trigger" />
+        </div>
+        <div class="clinical-card">
+          <img src="Bioseries/Before%20%26%20After%20Poster_With%20Product-10.png" alt="BioSeries Before and After Result 8" class="lightbox-trigger" />
+        </div>
       </div>
     </div>
   </section>

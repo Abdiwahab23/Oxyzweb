@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BioMSC Regenerative Peptides - Cellular Renewal Support, Lifting, Firming, and Dermal Restoration." />
+  <title>OXYZ Health & Wellness | BioMSC</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/Logo%202.png" />
+
+  <style>
+    :root {
+      --brand-dark: #023d2e;
+      --brand-primary: #05785c;
+      --brand-accent: #d4a000;
+      --font-display: 'Lora', serif;
+      --font-body: 'Inter', sans-serif;
+      --font-heading: 'Poppins', sans-serif;
+    }
+
+    body { font-family: var(--font-body); }
+    h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); letter-spacing: -0.5px; }
+
+    /* Light Aesthetic Hero Styling */
+    .hero-wrapper {
+      padding: 120px 20px 40px 20px;
+      background: #ffffff;
+    }
+
+    .biomsc-hero {
+      position: relative;
+      background: #fdfaf3;
+      border-radius: 40px;
+      padding: 100px 5%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      min-height: 75vh;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .biomsc-hero-content {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .hero-text h1 {
+      font-family: var(--font-heading);
+      font-size: 4.2rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+      line-height: 1.15;
+      color: var(--brand-dark);
+      letter-spacing: -2px;
+    }
+
+    .hero-text h1 span {
+      color: var(--brand-accent);
+      display: block;
+    }
+
+    .hero-lead {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+
+    .hero-badges {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .hero-badge {
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.08);
+      color: var(--brand-dark);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+
+    .hero-btn-group {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .hero-btn {
+      background: var(--brand-accent);
+      color: #fff;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      box-shadow: 0 10px 20px rgba(212,160,0,0.3);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .hero-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(212,160,0,0.4);
+      color: #fff;
+    }
+
+    .trusted-pill {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: #fff;
+      padding: 8px 25px 8px 10px;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .trusted-avatars {
+      display: flex;
+      padding-left: 5px;
+    }
+    
+    .trusted-avatars i {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: #ebf3f0;
+      color: var(--brand-primary);
+      display: flex; align-items: center; justify-content: center;
+      border: 3px solid #fff;
+      margin-left: -15px;
+      font-size: 1.1rem;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+    
+    /* Reversing z-index so the left avatars sit on top of the right ones */
+    .trusted-avatars i:nth-child(1) { z-index: 3; }
+    .trusted-avatars i:nth-child(2) { z-index: 2; }
+    .trusted-avatars i:nth-child(3) { z-index: 1; }
+    
+    .trusted-pill span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #333;
+      line-height: 1.2;
+    }
+
+    .hero-image {
+      position: relative;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .hero-image::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: #ebf3f0;
+      border-radius: 50%;
+      z-index: 0;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .hero-image img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      background: #fff;
+      padding: 15px;
+      border: 1px solid rgba(0,0,0,0.03);
+      animation: float 6s ease-in-out infinite;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Section Styles */
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 2.3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      letter-spacing: -0.5px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .info-card {
+      background: #ffffff;
+      padding: 50px 40px;
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+      border: 1px solid rgba(0,0,0,0.04);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .info-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg, rgba(5,120,92,0.03) 0%, transparent 100%);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(5,120,92,0.12);
+      border-color: rgba(5,120,92,0.1);
+    }
+
+    .info-card:hover::before {
+      opacity: 1;
+    }
+
+    .info-icon {
+      font-size: 2.8rem;
+      color: var(--brand-primary);
+      margin-bottom: 25px;
+      display: inline-block;
+      padding: 20px;
+      background: rgba(5,120,92,0.05);
+      border-radius: 20px;
+    }
+
+    .info-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .info-card p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .dark-section {
+      background: linear-gradient(135deg, #012b20 0%, #023d2e 50%, #705800 120%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .dark-section::after {
+      content: '';
+      position: absolute;
+      bottom: -150px; left: -150px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(212, 160, 0, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .dark-section h2, .dark-section h3 {
+      color: #fff;
+    }
+
+    .dark-section p {
+      color: rgba(255,255,255,0.75);
+    }
+    
+    .dark-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 45px 35px;
+      border-radius: 24px;
+      backdrop-filter: blur(10px);
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    .dark-card:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(212,160,0,0.3);
+      transform: translateY(-8px);
+    }
+
+    .ingredient-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .ingredient-list li {
+      margin-bottom: 25px;
+      padding-left: 35px;
+      position: relative;
+    }
+
+    .ingredient-list li::before {
+      content: '\f058';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 3px;
+      color: var(--brand-accent);
+      font-size: 1.3rem;
+    }
+
+    .ingredient-list strong {
+      display: block;
+      color: var(--brand-primary);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+      font-family: var(--font-heading);
+    }
+    
+    .dark-section .ingredient-list strong {
+      color: var(--brand-accent);
+    }
+
+    /* Protocol Section */
+    .protocol-step {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 25px;
+      background: #ffffff;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.03);
+      border: 1px solid rgba(0,0,0,0.02);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .protocol-step:hover {
+      box-shadow: 0 15px 40px rgba(5,120,92,0.08);
+      transform: translateX(10px);
+      border-color: rgba(5,120,92,0.1);
+    }
+
+    .step-icon {
+      background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-dark) 100%);
+      width: 70px;
+      height: 70px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: #fff;
+      flex-shrink: 0;
+      box-shadow: 0 10px 20px rgba(5,120,92,0.2);
+    }
+
+    .step-content h4 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      color: #111;
+    }
+
+    .step-content p {
+      color: #666;
+      margin: 0;
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+
+    @media (max-width: 992px) {
+      .hero-wrapper {
+        padding: 90px 15px 30px 15px;
+      }
+      .biomsc-hero {
+        padding: 60px 5%;
+        border-radius: 30px;
+      }
+      .biomsc-hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+      }
+      .hero-badges {
+        justify-content: center;
+      }
+      .hero-text h1 {
+        font-size: 3rem;
+      }
+      .hero-btn-group {
+        justify-content: center;
+      }
+      .hero-image::before {
+        width: 350px;
+        height: 350px;
+      }
+      .protocol-step {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 15px;
+        padding: 30px 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-wrapper {
+        padding: 80px 10px 20px 10px;
+      }
+      .biomsc-hero {
+        padding: 50px 20px;
+        border-radius: 20px;
+      }
+      .hero-text h1 {
+        font-size: 2.3rem;
+        line-height: 1.2;
+        letter-spacing: -1px;
+      }
+      .hero-lead {
+        font-size: 1.05rem;
+        margin-bottom: 30px;
+      }
+      .hero-btn-group {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+      .hero-image::before {
+        width: 250px;
+        height: 250px;
+      }
+      .hero-image img {
+        max-width: 90%;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div id="nav-placeholder"></div>
+  <script src="js/nav.js"></script>
+
+  <!-- Hero Section -->
+  <div class="hero-wrapper">
+    <header class="biomsc-hero">
+      <div class="biomsc-hero-content animate-on-scroll">
+        <div class="hero-text">
+          <div class="hero-badges">
+            <span class="hero-badge"><i class="fas fa-user-md"></i> Clinician Only</span>
+            <span class="hero-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" width="20" height="12" style="vertical-align: middle; margin-right: 6px; border-radius: 1px;">
+                <rect width="5" height="3" y="0" x="0" fill="#000"/>
+                <rect width="5" height="2" y="1" x="0" fill="#D00"/>
+                <rect width="5" height="1" y="2" x="0" fill="#FFCE00"/>
+              </svg>
+              Formulated in Germany
+            </span>
+          </div>
+          <h1>BioMSC <br><span>Regenerative Peptides</span></h1>
+          <p class="hero-lead">
+            An advanced, professional treatment for skin renewal, lifting, and deep restoration. 
+            Formulated in Germany, BioMSC is designed to bring the latest skin science into real-world clinic treatments.
+          </p>
+          <div class="hero-btn-group">
+            <a href="contact.html" class="hero-btn">Inquire Now <i class="fas fa-arrow-right"></i></a>
+            
+            <div class="trusted-pill">
+              <div class="trusted-avatars">
+                <i class="fas fa-user-md"></i>
+                <i class="fas fa-stethoscope"></i>
+                <i class="fas fa-user-nurse"></i>
+              </div>
+              <span>Trusted by Clinicians</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <!-- Using the BioMSC product image from the bioseries page -->
+          <img src="Bioseries/BioMSC.png" alt="BioMSC Product" />
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Product Overview -->
+  <section class="section" style="background: #f9fbfb;">
+    <div class="section-header text-center animate-on-scroll">
+      <h2 class="section-title">Product Overview</h2>
+      <p class="section-subtitle mt-2">Precision-engineered for advanced aesthetic medicine.</p>
+    </div>
+    
+    <div class="feature-grid animate-on-scroll" style="max-width: 1200px; margin: 40px auto 0;">
+      <div class="info-card text-center">
+        <i class="fas fa-bullseye info-icon"></i>
+        <h3>Primary Focus</h3>
+        <p>Supports natural skin renewal, lifting, firming, and complete skin restoration.</p>
+      </div>
+      <div class="info-card text-center">
+        <i class="fas fa-user-nurse info-icon"></i>
+        <h3>Target Audience</h3>
+        <p>For Medical Professionals only. Designed specifically for professional skin treatments in clinics.</p>
+      </div>
+      <div class="info-card text-center">
+        <i class="fas fa-globe-europe info-icon"></i>
+        <h3>Scientific Heritage</h3>
+        <p>Made in Germany and recognized by top European authorities in advanced biological skin therapies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Science of BioMSC -->
+  <section class="section">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div class="img-text-block animate-on-scroll">
+        <div style="text-align: left;">
+          <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">The Science of BioMSC</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 30px;">
+            BioMSC uses powerful signals from premium stem cells. Unlike older cells, these young, primitive cells are much more effective at encouraging your skin to naturally repair and rebuild itself.
+          </p>
+          <h3 style="font-size: 1.4rem; margin-bottom: 20px; color: #05785c;">Core Ingredients</h3>
+          <ul class="ingredient-list">
+            <li>
+              <strong>Skin-Building Peptides</strong>
+              Strengthens the skin's foundation to make it noticeably thicker, firmer, and stronger.
+            </li>
+            <li>
+              <strong>Healing Peptides (QK)</strong>
+              Boosts blood flow and cell growth to help the skin heal much faster.
+            </li>
+            <li>
+              <strong>Protective Enzymes</strong>
+              Stops the breakdown of healthy tissue to keep your skin strong and youthful for longer.
+            </li>
+          </ul>
+        </div>
+        <div class="img-wrapper" style="box-shadow: none;">
+          <img src="Products/DSC07542-3.jpg" alt="Science of BioMSC" style="border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mechanisms & Indications (Dark Section) -->
+  <section class="section dark-section">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      
+      <div class="section-header text-center animate-on-scroll" style="margin-bottom: 60px;">
+        <h2 class="section-title" style="color: #fff;">Mechanisms of Action</h2>
+        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 800px; margin: 15px auto 0;">
+          BioMSC acts as a powerful messenger, telling your skin cells to start repairing and renewing themselves.
+        </p>
+      </div>
+
+      <div class="feature-grid animate-on-scroll">
+        <div class="dark-card">
+          <i class="fas fa-layer-group" style="font-size: 2rem; color: #d4a000; margin-bottom: 20px;"></i>
+          <h3>Collagen Building</h3>
+          <p>Helps organize collagen fibers perfectly, giving your skin better structure and visible firmness.</p>
+        </div>
+        <div class="dark-card">
+          <i class="fas fa-chart-line" style="font-size: 2rem; color: #d4a000; margin-bottom: 20px;"></i>
+          <h3>Skin Cell Growth</h3>
+          <p>Triggers the rapid growth of fresh skin cells and new collagen for long-lasting, visible results.</p>
+        </div>
+        <div class="dark-card">
+          <i class="fas fa-shield-virus" style="font-size: 2rem; color: #d4a000; margin-bottom: 20px;"></i>
+          <h3>Calming & Balancing</h3>
+          <p>Greatly reduces skin inflammation and redness, creating a calm environment for healthy skin renewal.</p>
+        </div>
+      </div>
+
+      <hr style="border-color: rgba(255,255,255,0.1); margin: 80px 0;">
+
+      <div class="animate-on-scroll" style="max-width: 800px; margin: 0 auto;">
+        <h2 class="section-title" style="text-align: center; color: #fff; margin-bottom: 40px;">Clinical Indications</h2>
+        <ul class="ingredient-list" style="display: flex; flex-direction: column; gap: 15px;">
+          <li>
+            <strong>Skin Texture & Elasticity</strong>
+            Greatly improves overall skin smoothness, bounce, and stretch.
+          </li>
+          <li>
+            <strong>Scar Reduction</strong>
+            Helps reduce deep scars and naturally repairs damaged skin tissue.
+          </li>
+          <li>
+            <strong>Post-Procedure Care</strong>
+            Speeds up healing time after laser treatments or other cosmetic procedures.
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Technical Advantages -->
+  <section class="section" style="background: #f9fbfb;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div class="section-header text-center animate-on-scroll">
+        <h2 class="section-title">Key Technical Advantages</h2>
+      </div>
+      <div class="feature-grid animate-on-scroll">
+        <div class="info-card">
+          <i class="fas fa-microscope info-icon"></i>
+          <h3>Deep Penetration</h3>
+          <p>The active ingredients are made small enough to easily absorb deep into the skin where they are needed most.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-snowflake info-icon"></i>
+          <h3>Pure & Freeze-Dried</h3>
+          <p>The product is freeze-dried without any preservatives or additives, keeping the ingredients 100% fresh and powerful until used.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-file-medical-alt info-icon"></i>
+          <h3>Highly Safe</h3>
+          <p>Clinical studies show an extremely low reaction rate (only 0.03%), making it an exceptionally safe choice for professional treatments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Protocol for Clinicians -->
+  <section class="section">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <div class="section-header text-center animate-on-scroll" style="margin-bottom: 50px;">
+        <h2 class="section-title">Usage and Protocol</h2>
+        <p class="section-subtitle mt-2">Standardized guidelines for clinical administration.</p>
+      </div>
+
+      <div class="animate-on-scroll">
+        <div class="protocol-step">
+          <div class="step-icon"><i class="fas fa-tint"></i></div>
+          <div class="step-content">
+            <h4>1. Preparation</h4>
+            <p>Mix each vial with 5 ml of sterile water.</p>
+          </div>
+        </div>
+
+        <div class="protocol-step">
+          <div class="step-icon"><i class="fas fa-syringe"></i></div>
+          <div class="step-content">
+            <h4>2. Dosage</h4>
+            <p>Use 2.5 ml for facial treatments, or use the full 5 ml for larger body areas.</p>
+          </div>
+        </div>
+
+        <div class="protocol-step">
+          <div class="step-icon"><i class="fas fa-calendar-alt"></i></div>
+          <div class="step-content">
+            <h4>3. Treatment Plan</h4>
+            <p>A standard program is 6 sessions over 3 months (one treatment every 2 weeks).</p>
+          </div>
+        </div>
+
+        <div class="protocol-step">
+          <div class="step-icon"><i class="fas fa-sync-alt"></i></div>
+          <div class="step-content">
+            <h4>4. Maintenance</h4>
+            <p>After the first 3 months, maintain your results with one session every 3 to 6 months.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>
