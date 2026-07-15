@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&family=Lora:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
 
   <!-- Icons -->
@@ -32,23 +32,41 @@
   <script src="js/nav.js"></script>
 
   <!-- Hero Section -->
-  <header class="hero" style="
+  <header class="hero hero-bio" style="
         position: relative;
         overflow: hidden;
         background-color: var(--white);
       ">
+    <style>
+      .hero-bio::before {
+        background: linear-gradient(to right, rgba(15, 60, 85, 0.8) 0%, rgba(138, 77, 34, 0.7) 100%);
+      }
+      .hero-bio .hero-title {
+        font-family: 'Lora', serif;
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 1.15;
+        margin-bottom: 24px;
+        letter-spacing: -0.01em;
+      }
+      @media (max-width: 768px) {
+        .hero-bio .hero-title {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
     <video autoplay loop muted playsinline
       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
       <source src="images/here_video.mp4" type="video/mp4">
     </video>
-    <div class="hero-content">
-      <h1 class="hero-title">OXYZ BioSeries</h1>
+    <div class="hero-content text-center" style="margin: 0 auto;">
+      <h1 class="hero-title">OXYZ <br><span style="color: #f7b779;">BioSeries</span></h1>
       <p class="hero-subtitle">
         Professional Regenerative Solutions for Modern Aesthetic Medicine.<br />Advanced
         bioactive formulations developed to support skin rejuvenation, tissue
         regeneration, and professional aesthetic treatments.
       </p>
-      <div class="hero-buttons">
+      <div class="hero-buttons" style="justify-content: center;">
         <a href="#products" class="btn btn-primary">Explore Products</a>
         <a href="contact.html" class="btn btn-outline">Request Information</a>
       </div>
