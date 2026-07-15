@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&family=Lora:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
 
   <!-- Icons -->
@@ -31,9 +31,27 @@
     <script src="js/nav.js"></script>
 
   <!-- Hero Section -->
-  <header class="hero" style="background-image: url('About us/DSC07135-2.jpg'); background-position: center;">
-    <div class="hero-content">
-      <h1 class="hero-title">About OXYZ Health & Wellness</h1>
+  <header class="hero hero-about" style="background-image: url('About us/DSC07135-2.jpg'); background-position: center;">
+    <style>
+      .hero-about::before {
+        background: linear-gradient(to right, rgba(15, 60, 85, 0.9) 0%, rgba(138, 77, 34, 0.8) 100%);
+      }
+      .hero-about .hero-title {
+        font-family: 'Lora', serif;
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 1.15;
+        margin-bottom: 24px;
+        letter-spacing: -0.01em;
+      }
+      @media (max-width: 768px) {
+        .hero-about .hero-title {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+    <div class="hero-content text-center" style="margin: 0 auto;">
+      <h1 class="hero-title">About <br><span style="color: #f7b779;">OXYZ Health & Wellness</span></h1>
       <p class="hero-subtitle">
         Leading the way in regenerative medicine, scientific innovation, and personalized wellness solutions.
       </p>

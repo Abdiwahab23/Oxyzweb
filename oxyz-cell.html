@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&family=Lora:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
 
   <!-- Icons -->
@@ -32,19 +32,37 @@
     <script src="js/nav.js"></script>
 
   <!-- Hero Section -->
-  <header class="hero" style="
+  <header class="hero hero-stem" style="
         background-image: url(&quot;https://assets-global.website-files.com/63db3daf755901b6a464bd0e/658322e65d1083c68f2ce04c_experiment-biotechnology-with-chemistry-science-p-2000.jpg&quot;);
         background-position: center;
       ">
-    <div class="hero-content">
+    <style>
+      .hero-stem::before {
+        background: linear-gradient(to right, rgba(15, 60, 85, 0.9) 0%, rgba(138, 77, 34, 0.8) 100%);
+      }
+      .hero-stem .hero-title {
+        font-family: 'Lora', serif;
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 1.15;
+        margin-bottom: 24px;
+        letter-spacing: -0.01em;
+      }
+      @media (max-width: 768px) {
+        .hero-stem .hero-title {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+    <div class="hero-content text-center" style="margin: 0 auto;">
       <h1 class="hero-title">
-        Stem Cell: The Future of Regenerative Medicine
+        Stem Cell: The Future of <br><span style="color: #f7b779;">Regenerative Medicine</span>
       </h1>
       <p class="hero-subtitle">
         Supporting your body's natural ability to repair, restore, and renew
         through advanced stem cell therapies.
       </p>
-      <div class="hero-buttons">
+      <div class="hero-buttons" style="justify-content: center;">
         <a href="contact.html" class="btn btn-primary">Book an Appointment</a>
         <a href="#about" class="btn btn-outline">Learn More</a>
       </div>
