@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&family=Lora:wght@600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -38,20 +38,36 @@
 
     <!-- Hero Section -->
     <header
-      class="hero"
+      class="hero hero-training"
       style="
         background-image: url(&quot;Training/Untitled-5969-opt.jpg&quot;);
         background-position: center 30%;
       "
     >
-      <div class="hero-content">
-        <h1 class="hero-title">OXYZ Professional Training & Consultation</h1>
+      <style>
+        .hero-training::before {
+          background: linear-gradient(to right, rgba(15, 60, 85, 0.9) 0%, rgba(138, 77, 34, 0.8) 100%);
+        }
+        .hero-training .hero-title {
+          font-family: 'Lora', serif;
+          font-size: 3.5rem;
+          line-height: 1.1;
+          margin-bottom: 24px;
+        }
+        @media (max-width: 768px) {
+          .hero-training .hero-title {
+            font-size: 2.5rem;
+          }
+        }
+      </style>
+      <div class="hero-content text-center" style="margin: 0 auto;">
+        <h1 class="hero-title">OXYZ Professional <br><span style="color: #f7b779;">Training & Consultation</span></h1>
         <p class="hero-subtitle">
           Advancing Knowledge in Regenerative Medicine. Expand your expertise
           through OXYZ's professional training programs designed for healthcare
           practitioners, aesthetic professionals, and wellness providers.
         </p>
-        <div class="hero-buttons">
+        <div class="hero-buttons" style="justify-content: center;">
           <a href="#training" class="btn btn-primary">Training Programs</a>
           <a href="#consultation" class="btn btn-outline"
             >Consultation Services</a
