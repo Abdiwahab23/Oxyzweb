@@ -32,45 +32,141 @@
   <script src="js/nav.js"></script>
 
   <!-- Hero Section -->
-  <header class="hero hero-bio" style="
+  <header class="hero hero-bio-split">
+    <!-- Image on the right with a seamless fade mask -->
+    <div class="hero-right">
+      <img src="Products/DSC07554.jpg" alt="BioSeries" />
+    </div>
+
+    <style>
+      .hero-bio-split {
         position: relative;
         overflow: hidden;
-        background-color: var(--white);
-      ">
-    <style>
-      .hero-bio::before {
-        background: linear-gradient(to right, rgba(15, 60, 85, 0.8) 0%, rgba(138, 77, 34, 0.7) 100%);
+        background-image: url('Bioseries/bioser-Photoroom.png');
+        background-position: -15% center;
+        background-size: 75% auto;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        min-height: 75vh;
       }
-      .hero-bio .hero-title {
+      
+      .hero-bio-split::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, rgba(15, 60, 85, 0.9) 0%, rgba(138, 77, 34, 0.8) 100%);
+        z-index: 0;
+        pointer-events: none;
+      }
+      
+      .hero-bio-split .hero-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45%;
+        height: 100%;
+        z-index: 1;
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
+        mask-image: linear-gradient(to right, transparent 0%, black 30%);
+      }
+      
+      .hero-bio-split .hero-right img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .hero-bio-split .hero-content-left {
+        position: relative;
+        z-index: 3;
+        flex: 1;
+        padding: 60px 8%;
+        text-align: left;
+        max-width: 55%;
+        box-sizing: border-box;
+      }
+      .hero-bio-split .hero-title {
         font-family: 'Lora', serif;
-        font-size: 3.2rem;
+        font-size: 3.8rem;
         font-weight: 600;
         line-height: 1.15;
         margin-bottom: 24px;
         letter-spacing: -0.01em;
+        color: #ffffff;
       }
-      @media (max-width: 768px) {
-        .hero-bio .hero-title {
-          font-size: 1.5rem;
-          line-height: 1.3;
-          padding: 0 10px;
+      .hero-bio-split .hero-subtitle {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 0.95rem; /* Reduced font size even further */
+        line-height: 1.5;
+        max-width: 550px;
+        margin-bottom: 32px;
+      }
+      .hero-bio-split .hero-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: flex-start;
+      }
+      
+      @media (max-width: 1200px) {
+        .hero-bio-split .hero-title {
+          font-size: 2.8rem;
+          white-space: nowrap;
+        }
+        .hero-bio-split .hero-content-left {
+          padding: 60px 4%;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .hero-bio-split {
+          flex-direction: column;
+          align-items: center;
+          background-position: center 85%;
+          background-size: 140% auto;
+        }
+        .hero-bio-split .hero-right {
+          position: relative;
+          width: 100%;
+          min-height: 400px;
+          height: 45vh;
+          order: -1;
+          -webkit-mask-image: linear-gradient(to top, transparent 0%, black 30%) !important;
+          mask-image: linear-gradient(to top, transparent 0%, black 30%) !important;
+        }
+        .hero-bio-split .hero-content-left {
+          width: 100%;
+          max-width: 100%;
+          padding: 20px 20px 60px;
+          text-align: center;
+        }
+        .hero-bio-split .hero-subtitle {
+          max-width: 100%;
+          font-size: 1.05rem;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .hero-bio-split .hero-buttons {
+          justify-content: center;
+        }
+        .hero-bio-split .hero-title {
+          font-size: 2.5rem;
         }
       }
     </style>
-    <video autoplay loop muted playsinline
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
-      <source src="images/here_video.mp4" type="video/mp4">
-    </video>
-    <div class="hero-content text-center" style="margin: 0 auto;">
+    
+    <div class="hero-content-left">
       <h1 class="hero-title">OXYZ <span style="color: #f7b779;">BioSeries</span></h1>
       <p class="hero-subtitle">
         Professional Regenerative Solutions for Modern Aesthetic Medicine.<br />Advanced
         bioactive formulations developed to support skin rejuvenation, tissue
         regeneration, and professional aesthetic treatments.
       </p>
-      <div class="hero-buttons" style="justify-content: center;">
-        <a href="#products" class="btn btn-primary">Explore Products</a>
-        <a href="contact.html" class="btn btn-outline">Request Information</a>
+      <div class="hero-buttons">
+        <a href="#products" class="btn btn-primary" style="background-color: #d4a000; border-color: #d4a000; color: #fff;">Explore Products</a>
+        <a href="contact.html" class="btn btn-outline" style="border-color: #fff; color: #fff;">Request Information</a>
       </div>
     </div>
   </header>
@@ -83,58 +179,74 @@
     <div class="grid-4 animate-on-scroll">
       <!-- BioMSC -->
       <div style="display: flex; flex-direction: column; max-width: 320px; margin: 0 auto;">
-        <div style="background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 40px 20px; margin-bottom: 24px; display: flex; justify-content: center; align-items: center;">
+        <div
+          style="background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 40px 20px; margin-bottom: 24px; display: flex; justify-content: center; align-items: center;">
           <img src="Bioseries/BioMSC.png" alt="BioMSC" style="max-height: 180px; width: auto;" />
         </div>
         <h3 class="card-title text-primary" style="margin-bottom: 8px;">Series: BioMSC</h3>
         <h4 class="text-gold" style="margin-bottom: 16px; font-size: 0.95rem;">Focus: Cellular Renewal Support</h4>
-        <p class="card-text mb-2" style="text-align: left;"><strong>Benefits:</strong> Supports healthy skin, Collagen integrity</p>
+        <p class="card-text mb-2" style="text-align: left;"><strong>Benefits:</strong> Supports healthy skin, Collagen
+          integrity</p>
         <p class="card-text" style="text-align: left;">
-          <strong>Usage:</strong> Formulated to support regenerative aesthetic procedures by focusing on tissue quality and biological renewal.
+          <strong>Usage:</strong> Formulated to support regenerative aesthetic procedures by focusing on tissue quality
+          and biological renewal.
         </p>
-        <a href="contact.html" class="btn btn-outline-primary" style="margin-top: 16px; align-self: flex-start;">Learn More</a>
+        <a href="contact.html" class="btn btn-outline-primary" style="margin-top: 16px; align-self: flex-start;">Learn
+          More</a>
       </div>
 
       <!-- BioTHY -->
       <div style="display: flex; flex-direction: column; max-width: 320px; margin: 0 auto;">
-        <div style="background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 40px 20px; margin-bottom: 24px; display: flex; justify-content: center; align-items: center;">
+        <div
+          style="background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 40px 20px; margin-bottom: 24px; display: flex; justify-content: center; align-items: center;">
           <img src="Bioseries/BioTHY.png" alt="BioTHY" style="max-height: 180px; width: auto;" />
         </div>
         <h3 class="card-title text-primary" style="margin-bottom: 8px;">Series: BioTHY</h3>
         <h4 class="text-gold" style="margin-bottom: 16px; font-size: 0.95rem;">Focus: Immune & Biological Balance</h4>
-        <p class="card-text mb-2" style="text-align: left;"><strong>Benefits:</strong> Immune wellness, Tissue recovery</p>
-        <p class="card-text" style="text-align: left;">
-          <strong>Usage:</strong> Designed to complement regenerative treatment protocols by supporting biological balance and skin recovery.
+        <p class="card-text mb-2" style="text-align: left;"><strong>Benefits:</strong> Immune wellness, Tissue recovery
         </p>
-        <a href="contact.html" class="btn btn-outline-primary" style="margin-top: 16px; align-self: flex-start;">Learn More</a>
+        <p class="card-text" style="text-align: left;">
+          <strong>Usage:</strong> Designed to complement regenerative treatment protocols by supporting biological
+          balance and skin recovery.
+        </p>
+        <a href="contact.html" class="btn btn-outline-primary" style="margin-top: 16px; align-self: flex-start;">Learn
+          More</a>
       </div>
 
       <!-- BioPLC -->
       <div style="display: flex; flex-direction: column; max-width: 320px; margin: 0 auto;">
-        <div style="background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 40px 20px; margin-bottom: 24px; display: flex; justify-content: center; align-items: center;">
+        <div
+          style="background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 40px 20px; margin-bottom: 24px; display: flex; justify-content: center; align-items: center;">
           <img src="Bioseries/BioPLC.png" alt="BioPLC" style="max-height: 180px; width: auto;" />
         </div>
         <h3 class="card-title text-primary" style="margin-bottom: 8px;">Series: BioPLC</h3>
         <h4 class="text-gold" style="margin-bottom: 16px; font-size: 0.95rem;">Focus: Skin Vitality & Rejuvenation</h4>
-        <p class="card-text mb-2" style="text-align: left;"><strong>Benefits:</strong> Overall skin quality, Vitality improvement</p>
+        <p class="card-text mb-2" style="text-align: left;"><strong>Benefits:</strong> Overall skin quality, Vitality
+          improvement</p>
         <p class="card-text" style="text-align: left;">
-          <strong>Usage:</strong> Formulated for aesthetic practitioners seeking comprehensive skin rejuvenation support.
+          <strong>Usage:</strong> Formulated for aesthetic practitioners seeking comprehensive skin rejuvenation
+          support.
         </p>
-        <a href="contact.html" class="btn btn-outline-primary" style="margin-top: 16px; align-self: flex-start;">Learn More</a>
+        <a href="contact.html" class="btn btn-outline-primary" style="margin-top: 16px; align-self: flex-start;">Learn
+          More</a>
       </div>
 
       <!-- BioCTS -->
       <div style="display: flex; flex-direction: column; max-width: 320px; margin: 0 auto;">
-        <div style="background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 40px 20px; margin-bottom: 24px; display: flex; justify-content: center; align-items: center;">
+        <div
+          style="background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 40px 20px; margin-bottom: 24px; display: flex; justify-content: center; align-items: center;">
           <img src="Bioseries/BioCTS.png" alt="BioCTS" style="max-height: 180px; width: auto;" />
         </div>
         <h3 class="card-title text-primary" style="margin-bottom: 8px;">Series: BioCTS</h3>
         <h4 class="text-gold" style="margin-bottom: 16px; font-size: 0.95rem;">Focus: Connective Tissue Support</h4>
-        <p class="card-text mb-2" style="text-align: left;"><strong>Benefits:</strong> Skin firmness, Structural integrity</p>
+        <p class="card-text mb-2" style="text-align: left;"><strong>Benefits:</strong> Skin firmness, Structural
+          integrity</p>
         <p class="card-text" style="text-align: left;">
-          <strong>Usage:</strong> Developed to support connective tissue health, skin firmness, and structural integrity.
+          <strong>Usage:</strong> Developed to support connective tissue health, skin firmness, and structural
+          integrity.
         </p>
-        <a href="contact.html" class="btn btn-outline-primary" style="margin-top: 16px; align-self: flex-start;">Learn More</a>
+        <a href="contact.html" class="btn btn-outline-primary" style="margin-top: 16px; align-self: flex-start;">Learn
+          More</a>
       </div>
     </div>
   </section>
@@ -657,6 +769,14 @@
 
   <script src="js/modal.js"></script>
   <script src="js/footer.js"></script>
+</body>
+
+</html>Scripts -->
+<script src="js/script.js?v=5"></script>
+
+
+<script src="js/modal.js"></script>
+<script src="js/footer.js"></script>
 </body>
 
 </html>
